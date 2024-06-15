@@ -73,8 +73,7 @@ deactivate RoomMap
 ![image](https://github.com/1smaa/progettoedids/assets/74701801/289272f3-6894-4fbe-b722-91131f76553b)
 
 
-
-```
+```plantuml
 @startuml
 !theme materia-outline
 autonumber
