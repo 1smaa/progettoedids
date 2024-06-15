@@ -1,0 +1,38 @@
+As a player
+I want to interact with a menu
+So that I can manage my games
+-New Game button
+-Show current saved games
+-Exit button
+
+As a player
+I want an inventory
+So that I can manage my items
+-Display health
+-Show list of items in inventory
+-Display buttons to interact
+
+As a player
+I want to attack
+So that I can defeat enemies
+-Display damage done
+-Show attack/defense buttons
+
+As a player
+I want an in-game-menu
+So that I can exit my game
+-"Resume" button
+-"Save" button
+-"Exit" button
+
+As a player
+I want to be able to see the map
+So that I can move accordingly
+-Display roooms
+-Highlist items and entities
+
+As a player
+I want a guide
+So that I can learn how to play
+-Display list of commands
+-Show explanation of how game works
