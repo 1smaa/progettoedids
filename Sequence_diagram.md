@@ -68,7 +68,7 @@ deactivate RoomMap
 
 ```
 
-## Save(string saveName, int saveType
+## Save(string saveName, int saveType)
 
 ![image](https://github.com/1smaa/progettoedids/assets/74701801/289272f3-6894-4fbe-b722-91131f76553b)
 
@@ -183,4 +183,74 @@ deactivate Main
 end
 
 @enduml
+```
+
+## Battaglia
+
+![image](https://github.com/1smaa/progettoedids/assets/74701801/1c5a0173-b5b3-4e26-af2e-5d10e09c85c4)
+
+```plantuml
+@startuml
+!theme materia-outline
+autonumber
+skinparam ArrowColor #00B4D8
+skinparam ActorBorderColor #03045E
+skinparam ActorFontColor #03045E
+skinparam ActorBackgroundColor #CAF0F8
+skinparam ParticipantFontColor #03045E
+skinparam ParticipantBorderColor #03045E
+skinparam ParticipantBackgroundColor #90E0EF
+skinparam DatabaseBorderColor #03045E
+skinparam DatabaseBackgroundColor #00B4D8
+skinparam DatabaseFontColor #03045E
+skinparam BackgroundColor #FFFFFF
+
+actor Giocatore
+participant Main
+participant Boss
+participant Overlay
+
+Main --> Giocatore : Alert "Ha inizio la battaglia!"
+activate Main
+Main -> Boss : start()
+activate Boss
+Boss --> Main
+deactivate Boss
+loop PlayerHealth > 0 || BossHealth > 0
+Main --> Giocatore : Alert "Inserisci lettera predefinita"
+Giocatore -> Main
+
+alt Lettera inserita in tempo
+Main -> Boss : decreaseHealth(int quantity)
+activate Boss
+Boss --> Main
+deactivate Boss
+
+alt BossHealth < 0
+
+Main --> Giocatore : Alert "Hai vinto la battaglia!"
+
+end
+
+else Lettera non inserita in tempo
+Main -> Overlay : setHealth(int healthN)
+activate Overlay
+Main -> Overlay : getHealth()
+Overlay --> Main
+deactivate Overlay
+
+alt PlayerHealth < 0
+
+Main --> Giocatore : Alert "Hai perso la battaglia!"
+
+deactivate Main
+end
+
+end
+
+end
+
+
+@enduml
+
 ```
