@@ -1,3 +1,58 @@
+# System Sequence Diagrams
+
+![image](https://github.com/1smaa/progettoedids/assets/74701801/a2903a29-dd56-402e-a0ae-63df27d1ed33)
+
+```plantuml
+@startuml
+!theme materia-outline
+autonumber 
+
+skinparam ArrowColor #00B4D8
+skinparam ActorBorderColor #03045E
+skinparam ActorFontColor #03045E
+skinparam ActorBackgroundColor #CAF0F8
+skinparam ParticipantFontColor #03045E
+skinparam ParticipantBorderColor #03045E
+skinparam ParticipantBackgroundColor #90E0EF
+skinparam DatabaseBorderColor #03045E
+skinparam DatabaseBackgroundColor #00B4D8
+skinparam DatabaseFontColor #03045E
+skinparam BackgroundColor #FFFFFF
+
+title Game
+
+actor player
+database games
+participant map
+
+== Main Menu ==
+player->games: createGame
+games->map: load
+== Game ==
+loop alive?
+opt
+player->games: save
+games-->player: done
+end
+create entity enemy
+map->enemy: spawn
+loop Both alive
+player->enemy: attack
+enemy-->player: defend
+end
+alt Enemy Defeated
+player->enemy: loot
+create participant item
+enemy->item: drop
+player->item: collect
+else
+player->games: quit
+end
+end
+player->games: quit
+@enduml
+
+```
 
 # Internal Sequence Diagrams
 
