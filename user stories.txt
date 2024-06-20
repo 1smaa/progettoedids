@@ -44,5 +44,5 @@
 8.	As I player I want to complete the game
 	As a player
 	I want to complete the game
-	-	I want to win or loose as a consequence of my actions
+	-	I want to win or lose as a consequence of my actions
 	-	when I arrive at the end of the game I want to choose between the 2 endings
