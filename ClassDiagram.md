@@ -1,7 +1,7 @@
 
 # Class Diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/8f2e212d-ffe7-4a17-849c-dca401938ce1)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/b518f505-dd95-4137-95d6-98d511d2ae32)
 
 
 ```plantuml
@@ -99,7 +99,17 @@ class ViewportManager {
     + String getOverlay()
 }
 
+class Combat {
+    - Entity entity
+    - Entity player
+    + Combat(Entity, Entity)
+    + int start()
+    + String call()
+    - void clearConsole()
+}
+
 Room  -down-*  RoomMap : Contiene ed istanzia
+Combat -right-> Entity : Utilizza
 
 @enduml
 
