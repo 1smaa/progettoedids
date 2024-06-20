@@ -1,7 +1,7 @@
 
 # Class Diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/41005bcf-4ee8-4e06-99ca-ae7b0713d572)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/61ce63a9-e9cf-4f03-b3ba-90915a70c4ec)
 
 
 ```plantuml
@@ -111,6 +111,7 @@ class Combat {
 
 Room "*" -down-* "*"  RoomMap : Contiene ed istanzia
 Combat "1" -down-> "*" Entity : Utilizza
+Combat "1" -left-> "*" Item : Utilizza
 Map -down-> ViewportManager : Utilizza
 Map "1" -left-* "*" RoomMap : Contiene ed istanzia
 Map "1" -right-> "1" Overlay : Utilizza
