@@ -1,3 +1,10 @@
+
+# Domain model
+
+![domainModel](https://github.com/1smaa/progettoedids/assets/169902818/e4fc6649-8be3-4d64-b700-47684b3c2428)
+
+
+```plantuml
 @startuml
 object Player{
 health
@@ -35,3 +42,4 @@ Map "1"-up->"*" Room: contains
 Map "1" -> "*" Enemy: spawns
 Enemy "1" -> "1" Item: drops
 @enduml
+```
