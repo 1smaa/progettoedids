@@ -25,3 +25,6 @@
 7.	As a player I want to solve the quests
 	-	I want to be able to choose the option I want when there are quests to be solved
 	-	The game has to show the options and I can choose one, for example: A ..., B ... -> if I want to choose option A I have to press A 
+8.	As a player I want to complete the game
+	-	If my health is 0 the game has to tell me I have lost
+	-	If I don't loose and arrive at the end of the game, the game has to show the 2 endings and I have to be able to choose which one I want
