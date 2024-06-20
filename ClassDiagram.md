@@ -1,7 +1,7 @@
 
 # Class Diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/b518f505-dd95-4137-95d6-98d511d2ae32)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/41005bcf-4ee8-4e06-99ca-ae7b0713d572)
 
 
 ```plantuml
@@ -11,6 +11,7 @@ skinparam classAttributeIconSize 0
 class Main {
 
 }
+
 
 class Entity {
     + int health
@@ -108,9 +109,11 @@ class Combat {
     - void clearConsole()
 }
 
-Room  -down-*  RoomMap : Contiene ed istanzia
-Combat -right-> Entity : Utilizza
+Room "*" -down-* "*"  RoomMap : Contiene ed istanzia
+Combat "1" -down-> "*" Entity : Utilizza
+Map -down-> ViewportManager : Utilizza
+Map "1" -left-* "*" RoomMap : Contiene ed istanzia
+Map "1" -right-> "1" Overlay : Utilizza
 
 @enduml
-
 ```
