@@ -1,5 +1,5 @@
 
-# Class Diagram
+# Class diagram
 
 ![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/61ce63a9-e9cf-4f03-b3ba-90915a70c4ec)
 
