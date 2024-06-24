@@ -1,8 +1,9 @@
 import java.io.FileNotFoundException;
 import java.io.File;
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class RoomMap {
+public class RoomMap implements Serializable {
     private Room[][] rooms;
     private Room current;
     private String currentStr;
@@ -31,25 +32,29 @@ public class RoomMap {
         return this.currentStr;
     }
     //moves the player to the chosen room, true if possible, false otherwise
-    public boolean move(int code) throws FileNotFoundException{
+    public boolean move(char code) throws FileNotFoundException{
         int newX=x,newY=y;
         switch(code){
-            case 1:
+            case 'w':
                 newY--;
                 break;
-            case 2:
+            case 's':
                 newY++;
                 break;
-            case 3:
+            case 'a':
                 newX--;
                 break;
-            case 4:
+            case 'd':
                 newX++;
                 break;
             default:
                 return false;
         }
-        if(!checkBounds(newX, newY)) return false;
+        System.out.println(rooms[newY][newX].valid());
+        System.out.println(newX);
+        System.out.println(newY);
+        try{ Thread.sleep(1000); } catch(Exception e){}
+        if(!checkBounds(newX, newY)||!rooms[newY][newX].valid()) return false;
         this.last=this.current;
         this.current=this.rooms[newY][newX];
         this.currentStr=this.current.load();
@@ -60,5 +65,11 @@ public class RoomMap {
     //returns current room id
     public int currId(){
         return this.current.getId();
+    }
+    public Room get(int x,int y){
+        return this.rooms[y][x];
+    }
+    public void set(int x,int y,Room r){
+        this.rooms[y][x]=r;
     }
 }
