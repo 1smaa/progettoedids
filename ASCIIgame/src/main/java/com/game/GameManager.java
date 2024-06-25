@@ -2,6 +2,7 @@ package com.game;
 
 import com.atomic.Entity;
 import com.boss.*;
+import com.atomic.Item;
 
 import java.io.FileNotFoundException;
 
@@ -11,9 +12,13 @@ public class GameManager {
     private Labirinth labirinth;
     private Entity player;
     //Save callback functions in sequence that correspond to triggers
-    CallBack[] phases={new FirstBoss(),new SecondBoss(),new ThirdBoss(),new Labirinth(null),new FinalBoss()};
+    private CallBack[] phases={new FirstBoss(),new SecondBoss(),new ThirdBoss(),new Labirinth(null),new FinalBoss()};
     //com.game.Room ID at which the correspondent callback should be triggered
-    int[] triggers={2,4,5,7,12};
+    private int[] triggers={2,4,5,7,12};
+    private Item[] inventory={new Item(-1,-1,"-",-1,""),
+            new Item(-1,-1,"-",-1,""),
+            new Item(-1,-1,"-",-1,""),
+            new Item(-1,-1,"-",-1,"")};
     //Index or phase of the com.game, to indicate next callback
     int ind=0;
     public GameManager(Entity player,RoomMap map,Labirinth lab){
@@ -29,7 +34,7 @@ public class GameManager {
         //If the player is in the next trigger room
         if(this.map.currId()==this.triggers[this.ind]){
             //Call for boss fight, and await result
-            boolean res=this.phases[this.ind].onCallback(this.player,this.map,this.labirinth);
+            boolean res=this.phases[this.ind].onCallback(this.player,this.map,this.labirinth,this.inventory);
             //If the fight has been won increment the phase index
             if(res) this.ind++;
             //Otherwise return gameover
@@ -39,5 +44,13 @@ public class GameManager {
         }
         //Otherwise normal activity, return 0
         return 0;
+    }
+
+    public String[] getVisInventory(){
+        String[] n={"-","-","-","-"};
+        for(int i=0;i<this.inventory.length;i++){
+            n[i]=this.inventory[i].item;
+        }
+        return n;
     }
 }

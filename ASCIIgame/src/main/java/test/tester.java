@@ -44,7 +44,8 @@ public class tester {
             scan.close();
         }catch(FileNotFoundException e){ overlay=""; }
         ViewportManager vp=new ViewportManager();
-        vp.setOverlay(overlay);
+        String OGoverlay=overlay;
+        vp.setOverlay(OGoverlay);
         do{
             System.out.println(vp.format(map.curr()));
             char c=sc.next().charAt(0);
@@ -54,6 +55,14 @@ public class tester {
             }catch(FileNotFoundException e){
                 result=-1;
             }
+            String[] visInv=gm.getVisInventory();
+            String nOverlay=OGoverlay;
+            for(int i=0;i<visInv.length;i++){
+                //System.out.println(visInv[i]);
+                //try{ Thread.sleep(3000); } catch(Exception e){ e.printStackTrace(); }
+                nOverlay=nOverlay.replaceFirst("£",visInv[i]);
+            }
+            vp.setOverlay(nOverlay);
         }while(result==0);
         sc.close();
         if(result==1) System.out.println("YOU WIN!");

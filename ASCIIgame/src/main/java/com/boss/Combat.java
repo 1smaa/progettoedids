@@ -15,7 +15,7 @@ public class Combat {
         this.entity=entity;
         this.player=player;
     }
-    public int start(){
+    public int start(String s){
         //Start executor for time restrictions on input
         ExecutorService executor = Executors.newSingleThreadExecutor();
         //Create Scanner
@@ -40,11 +40,10 @@ public class Combat {
                 }
             };
             //Print both health of player and boss
-            this.logHealth(maxHealthPlayer,maxHeathEntity);
+            String n=this.logHealth(match,s,maxHealthPlayer,maxHeathEntity);
+            System.out.println(n);
             //Start task
             Future<String> future = executor.submit(task);
-            //Print char to match
-            System.out.println(match);
             try {
                 //Get the result with timeout, otherwise TimeoutException is thrown
                 String result = future.get(this.player.speed+this.entity.speed, TimeUnit.SECONDS);
@@ -54,6 +53,14 @@ public class Combat {
                 this.entity.health-=this.player.damage;
             } catch (TimeoutException e) {
                 //Otherwise the player receives damage
+                executor = Executors.newSingleThreadExecutor();
+                task = new Callable<String>() {
+                    @Override
+                    public String call() {
+                        return scanner.nextLine();
+                    }
+                };
+                future = executor.submit(task);
                 this.player.health-=this.entity.damage;
             } catch (InterruptedException | ExecutionException e ){
                 //In other types of exceptions simply print the stacktrace and continue
@@ -68,7 +75,8 @@ public class Combat {
         else return 0;
     }
     //Function to log both health of player and boss
-    private void logHealth(int maxHealthPlayer,int maxHeathEntity){
+    private String logHealth(String m,String s,int maxHealthPlayer,int maxHeathEntity){
+        String n=s.replace("#",m);
         String playerHealth="";
         for(int i=0;i<maxHealthPlayer;i++){
             if(i<this.player.health) playerHealth+="O";
@@ -79,8 +87,9 @@ public class Combat {
             if(i<this.entity.health) entityHealth+="O";
             else entityHealth+="-";
         }
-        System.out.println(playerHealth);
-        System.out.println(entityHealth);
+        n=n.replace("&",playerHealth);
+        n=n.replace("$",entityHealth);
+        return n;
     }
     //Function to clear the console (simulate frames)
     private void clearConsole() {

@@ -8,6 +8,7 @@ import com.atomic.Entity;
 import com.game.RoomMap;
 import com.game.Room;
 import test.tester;
+import com.atomic.Item;
 
 public class Labirinth implements Serializable,CallBack {
     private LabNode head;
@@ -52,7 +53,7 @@ public class Labirinth implements Serializable,CallBack {
     public String getCurr() throws FileNotFoundException {
         return this.curr.getView();
     }
-    public boolean onCallback(Entity player, RoomMap map, Labirinth labirinth){
+    public boolean onCallback(Entity player, RoomMap map, Labirinth labirinth,Item[] inventory){
         Scanner scan=new Scanner(System.in);
         try{
             while(!this.curr.flag) {
@@ -94,6 +95,7 @@ public class Labirinth implements Serializable,CallBack {
         Room r=map.get(6,2);
         r.setValid(true);
         map.set(6,2,r);
+        tester.clearConsole();
         return true;
     }
 

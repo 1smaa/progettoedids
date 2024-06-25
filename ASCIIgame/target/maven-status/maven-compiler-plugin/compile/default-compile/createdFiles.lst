@@ -1,12 +1,8 @@
 com\boss\Combat$1.class
-com\boss\SecondBoss.class
-com\game\GameManager.class
-com\game\RoomMap.class
-test\setter.class
-com\atomic\Entity.class
 com\boss\FinalBoss.class
 com\cloud\CloudContainer.class
 com\boss\CallBack.class
+com\boss\SecondBoss.class
 com\boss\Combat.class
 com\game\Room.class
 com\boss\LabNode.class
@@ -14,7 +10,11 @@ com\atomic\Item.class
 com\boss\ThirdBoss.class
 com\boss\FirstBoss.class
 com\viewport\Overlay.class
+com\game\GameManager.class
 com\viewport\ViewportManager.class
 com\boss\Labirinth.class
+com\game\RoomMap.class
+test\setter.class
+com\atomic\Entity.class
 test\tester.class
 com\cloud\CloudUploader.class
