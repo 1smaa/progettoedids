@@ -1,54 +1,130 @@
 
 # Class diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/61ce63a9-e9cf-4f03-b3ba-90915a70c4ec)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/2c797e52-81dd-4405-a484-8ac404482aab)
 
 
 ```plantuml
 @startuml
 skinparam classAttributeIconSize 0
 
-class Main {
-
-}
-
-
 class Entity {
     + int health
     + int damage
     + int speed
-    + Entity(int, int, int)
+    + String name
+    + Entity(Stringm, int, int, int)
 }
 
 class Item {
     + int damage
     + int speed
+    + int weight
     + String item
-    + Item(int,int,String)
+    + String longName
+    + Item(int,int,String, int, String)
 }
 
-class Map {
-    - File f
-    - String fn
-    - int Xcoord
-    - int Ycoord
-    - int VPwidth
-    - int VPheight
-    - String vCache
-    - void load()
-    + Map(String, int, int, int, int)
-    + Map(String, int, int)
-    + String getViewPort()
-    + void move(int, int)
-    + int getMaxX()
-    + int getMaxY()
-    + int getX()
-    + int getY()
+interface CallBack{
+    boolean onCallBack(Entity, RoomMap, Labirinth)
+}
+
+class Combat {
+    - Entity entity
+    - Entity player
+    + Combat(Entity, Entity)
+    + int start()
+    - void loghealth(int, int)
+    - void clearConsole()
+}
+
+class FinalBoss {
+    - {Static} Entity boss
+}
+
+class FirstBoss {
+    - {static} Entity boss
+}
+
+class SecondBoss {
+    - {static} Entity boss
+}
+
+class ThirdBoss {
+    - {static} Entity boss
+}
+
+class LabNode {
+    - LabNode left
+    - LabNode right
+    - LabNode back
+    - Room room
+    + boolean flag = false
+    + LabNode(LabNode, LabNode, LabNode, Room)
+    + LabNode getLeft()
+    + LabNode getRight()
+    + LabNode getBack()
+    + String getView()
+    + void toogleFlag()
+    + boid setBack(LabNode)
+}
+
+class Labirinth {
+    - LabNode head
+    - LabNode curr
+    + Labirinth(LabNode)
+    + boolean move(char)
+    - boolean moveBack()
+    - boolean moveRight()
+    - boolean moveLeft()
+    + boolean win()
+    + String getCurr()
+}
+
+class GameManager {
+    - RoomMap map
+    - Labirinth labirinth
+    - Entity player
+    - CallBack[] phases
+    - int[] triggers
+    - Item[] inventory
+    - int ind = 0
+    + GameManager(Entity, RoomMap, Labirinth)
+    + int move(char)
+    + String[] getVisInventory()
+}
+
+class Room {
+    - String fileName
+    - int id
+    - boolean isValid
+    + Room(String,int)
+    + Room(Sring, int, boolean)
+    + String load()
+    + int getId()
+    + boolean valid()
+    + void setValid(boolean)
+}
+
+class RoomMap {
+    - Room[][] rooms
+    - Room current
+    - String currentStr
+    - Room last
+    - int x,y
+    + RoomMap(Room[][], int, int)
+    - boolean checkBounds(int, int)
+    + boolean hasLast()
+    + String curr()
+    + boolean move(char)
+    + int currId()
+    + Room get(int, int)
+    + void set(int, int, Room)
 }
 
 class Overlay {
     - String overlay
-    - int health;
+    - int health
     - String[] inventory
     - int healthMax
     - int healthStart
@@ -65,32 +141,6 @@ class Overlay {
     + String[] getInventory()
 }
 
-class Room {
-    - String fileName
-    - int id
-    - boolean isValid
-    + Room(String,int)
-    + Room(Sring, int, boolean)
-    + String load()
-    + int getId()
-    + boolean valid()
-    + void setvalid(boolean)
-}
-
-class RoomMap {
-    - Room[][] rooms
-    - Room current
-    - String currentStr
-    - Room last
-    - int x,y
-    + RoomMap(Room[][], int, int)
-    - boolean checkBounds(int, int)
-    + boolean hasLast()
-    + String curr()
-    + boolean move(int)
-    + int currId()
-}
-
 class ViewportManager {
     + String overlay
     - {static} char IGNORE=#
@@ -100,21 +150,38 @@ class ViewportManager {
     + String getOverlay()
 }
 
-class Combat {
-    - Entity entity
-    - Entity player
-    + Combat(Entity, Entity)
-    + int start()
-    + String call()
-    - void clearConsole()
+class tester{
+    - {static} String MAPFILE="stdmap.config"
+    - {static} String LABFILE="lab.config"
+    - {static} String MENU="S - Start - Quit - Continue - Manual"
+    + {static} void clearConsole()
+    - {static} void startGame(RoomMap, Labirinth)
+    - {static} void printManual()
+    - {static} void loadAndPlay(RoomMap, Labirinth)
+    + {static} void main(String[])
 }
 
-Room "*" -down-* "*"  RoomMap : Contiene ed istanzia
-Combat "1" -down-> "*" Entity : Utilizza
-Combat "1" -left-> "*" Item : Utilizza
-Map -down-> ViewportManager : Utilizza
-Map "1" -left-* "*" RoomMap : Contiene ed istanzia
-Map "1" -right-> "1" Overlay : Utilizza
+RoomMap "*" -right-* "*"  Room : Contiene ed istanzia
+Combat "1" -right-* "*" Entity : Contiene ed istanzia
+Overlay "1" -left-* "*" Item : Contiene ed istanzia
+Overlay "1" -up-* "*" Entity : Contiene ed istanzia
+LabNode "*" --* "*" Room : Contiene ed istanzia
+Labirinth "1" -right-* "*" LabNode : Contiene ed istanzia
+GameManager "1" -down-> "*" RoomMap : Utilizza
+GameManager "1" -left-* "*" Entity : Contiene ed istanzia
+GameManager "1" -up-> "1" Labirinth : Utilizza
+GameManager "1" -down-> "1" ViewportManager : Utilizza
+ViewportManager "1" -down-> "1" Overlay : Utilizza
+tester "1" -up-> "1" GameManager : Lancia
+FirstBoss "1" --* "*" Entity : Contiene ed istanzia
+SecondBoss "1" --* "*" Entity : Contiene ed istanzia
+ThirdBoss "1" --* "*" Entity : Contiene ed istanzia
+FinalBoss "1" --* "*" Entity : Contiene ed istanzia
+CallBack .down.> FinalBoss
+CallBack .down.> FirstBoss
+CallBack .down.> SecondBoss
+CallBack .down.> ThirdBoss
+CallBack ..> Labirinth
 
 @enduml
 ```
