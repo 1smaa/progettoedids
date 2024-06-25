@@ -11,7 +11,7 @@
 
 3.	As a player I want an inventory
 	-	The inventory has to be displayed at all times when I am playing
-	-	The inventory has to display my health, for example: health 3/10
+	-	The inventory has to display my health, for example: health 00000-----
 	-	The inventory has to display the items I own and I can interact with it by pushing the corresponding keyboard number, for example: item1 | item2 | -> if I press number "1" on the keyboard I can use item1
 
 4.	As a player I want a guide so that I can figure out the commands to play
@@ -21,7 +21,7 @@
 
 5.	As a player I want to attack
 	-	I want to be able to attack when I have to fight with an enemy
-	-	The game has to display the damage I have done, for example: damage: -5
+	-	The game has to display the damage I have done, for example: BossName: 000000000-
 	-	The game has to display the attack button that I can push to attack my enemy, for example: "press A to attack"
 
 6.	As a player I want to solve the quests
