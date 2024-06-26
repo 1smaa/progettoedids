@@ -50,7 +50,7 @@ public class RoomMap implements Serializable {
             default:
                 return false;
         }
-        if(!checkBounds(newX, newY)||!rooms[newY][newX].valid()) return false;
+        if((this.rooms[newY][newX]==null||!checkBounds(newX, newY))||!this.rooms[newY][newX].valid()) return false;
         this.last=this.current;
         this.current=this.rooms[newY][newX];
         this.currentStr=this.current.load();

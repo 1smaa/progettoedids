@@ -13,9 +13,7 @@ import java.nio.file.Paths;
 
 public class setter{
     public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(System.getProperty("user.dir"));
         Room r1=new Room("src/main/resources/Rooms/1.txt",1,true);
-        Room inv=new Room("src/main/resources/Rooms/1.txt",-1,false);
         Room r2=new Room("src/main/resources/Rooms/2.txt",2,true);
         Room r3=new Room("src/main/resources/Rooms/3.txt",3,true);
         Room r4=new Room("src/main/resources/Rooms/4.txt",4,true);
@@ -27,12 +25,11 @@ public class setter{
         Room r10=new Room("src/main/resources/Rooms/10.txt",10,true);
         Room r11=new Room("src/main/resources/Rooms/11.txt",11,true);
         Room r12=new Room("src/main/resources/Rooms/12.txt",12,false);
-        Path dirPath=Paths.get("src/main/resources/Rooms");
-        Room[][] rm={{inv,inv,inv,inv,inv,inv,inv,inv,inv},
-                {inv,inv,inv,r4,inv,inv,inv,inv,inv},
-                {inv,r1,r2,r3,r6,r7,r12,inv,inv},
-                {inv,inv,inv,r5,inv,inv,inv,inv,inv},
-                {inv,inv,inv,inv,inv,inv,inv,inv,inv}};
+        Room[][] rm={{null,null,null,null,null,null,null,null,null},
+                {null,null,null,r4,null,null,null,null,null},
+                {null,r1,r2,r3,r6,r7,r12,null,null},
+                {null,null,null,r5,null,null,null,null,null},
+                {null,null,null,null,null,null,null,null,null}};
         RoomMap rmMap=new RoomMap(rm,1,2);
         LabNode f=new LabNode(null,null,null,r9);
         f.toogleFlag();

@@ -21,7 +21,7 @@ public class ThirdBoss implements CallBack {
         }catch(FileNotFoundException e){ return false; }
         String nOver=overlay;
         nOver=nOver.replace("1","Choose your weapon                                  ");
-        String nln="1- #1  2- #2  3- #3  4-#4";
+        String nln="1- #1  2- #2  3- #3  4- #4";
         for(int i=0;i<inventory.length;i++){
             nln=nln.replace("#"+(i+1),inventory[i].longName);
         }

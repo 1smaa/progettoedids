@@ -44,9 +44,6 @@ public class FirstBoss implements CallBack{
                 }
             }
             tester.clearConsole();
-            Room r=map.get(1,3);
-            r.setValid(true);
-            map.set(1,3,r);
             return true;
         }else return false;
     }

@@ -5,8 +5,9 @@ import com.boss.*;
 import com.atomic.Item;
 
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 
-public class GameManager {
+public class GameManager implements Serializable {
     //Class attributes
     private RoomMap map;
     private Labirinth labirinth;
@@ -15,10 +16,10 @@ public class GameManager {
     private CallBack[] phases={new FirstBoss(),new SecondBoss(),new ThirdBoss(),new Labirinth(null),new FinalBoss()};
     //com.game.Room ID at which the correspondent callback should be triggered
     private int[] triggers={2,4,5,7,12};
-    private Item[] inventory={new Item(-1,-1,"-",-1,""),
-            new Item(-1,-1,"-",-1,""),
-            new Item(-1,-1,"-",-1,""),
-            new Item(-1,-1,"-",-1,"")};
+    private Item[] inventory={new Item(-1,-1,"-",0,""),
+            new Item(-1,-1,"-",0,""),
+            new Item(-1,-1,"-",0,""),
+            new Item(-1,-1,"-",0,"")};
     //Index or phase of the com.game, to indicate next callback
     int ind=0;
     public GameManager(Entity player,RoomMap map,Labirinth lab){
@@ -52,5 +53,11 @@ public class GameManager {
             n[i]=this.inventory[i].item;
         }
         return n;
+    }
+
+    public int getInventoryWeight(){
+        int sum=0;
+        for(int i=0;i<inventory.length;i++) sum+=inventory[i].weight;
+        return sum;
     }
 }

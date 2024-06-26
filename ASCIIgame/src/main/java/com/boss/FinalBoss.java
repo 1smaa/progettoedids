@@ -13,13 +13,14 @@ public class FinalBoss implements CallBack{
     public boolean onCallback(Entity player, RoomMap map, Labirinth labirinth,Item[] inventory){
         File baseOver=new File("src/main/resources/voidover.txt");
         String overlay="";
+        tester.clearConsole();
         try{
             Scanner scan=new Scanner(baseOver);
             while(scan.hasNextLine()) overlay+=scan.nextLine()+"\n";
         }catch(FileNotFoundException e){ return false; }
         String nOver=overlay;
         nOver=nOver.replace("1","Choose your weapon                                  ");
-        String nln="1- #1  2- #2  3- #3  4-#4";
+        String nln="1- #1  2- #2  3- #3  4- #4";
         for(int i=0;i<inventory.length;i++){
             nln=nln.replace("#"+(i+1),inventory[i].longName);
         }

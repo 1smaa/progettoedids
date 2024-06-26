@@ -25,7 +25,7 @@ public class Combat {
         //Create array of possible keys
         final String[] keys={"w","a","s","d"};
         //Starting health of the player
-        int maxHealthPlayer=this.player.health;
+        int maxHealthPlayer=10;
         //Starting health of the entity
         int maxHeathEntity=this.entity.health;
         //While both are alive
@@ -46,25 +46,17 @@ public class Combat {
             Future<String> future = executor.submit(task);
             try {
                 //Get the result with timeout, otherwise TimeoutException is thrown
-                String result = future.get(this.player.speed+this.entity.speed, TimeUnit.SECONDS);
+                String result;
+                try{
+                    result = future.get(this.player.speed+this.entity.speed, TimeUnit.SECONDS);
+                }catch(Exception e){ throw new TimeoutException(); }
                 //If the result does not match the expected one a TimeoutException is thrown, as it would if the input was not typed in time
                 if(!result.equals(match)) throw new TimeoutException();
                 //If the player successfully pressed the key, do damage
                 this.entity.health-=this.player.damage;
             } catch (TimeoutException e) {
                 //Otherwise the player receives damage
-                executor = Executors.newSingleThreadExecutor();
-                task = new Callable<String>() {
-                    @Override
-                    public String call() {
-                        return scanner.nextLine();
-                    }
-                };
-                future = executor.submit(task);
-                this.player.health-=this.entity.damage;
-            } catch (InterruptedException | ExecutionException e ){
-                //In other types of exceptions simply print the stacktrace and continue
-                e.printStackTrace();
+                this.player.health -= this.entity.damage;
             }
             this.clearConsole();
         }
@@ -99,7 +91,7 @@ public class Combat {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
                 // Unix-based systems
-                System.out.print("\033[H\033[2J");  
+                System.out.print("\033[H\033[2J");
                 System.out.flush();
             }
         } catch (IOException | InterruptedException ex) {

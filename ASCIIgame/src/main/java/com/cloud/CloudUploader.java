@@ -1,6 +1,5 @@
 package com.cloud;
 
-import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.GetObjectRequest;
@@ -13,18 +12,17 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import com.atomic.Item;
 
 //Uploads com.game details to AWS bucket
 public class CloudUploader {
     private CloudContainer cc;
     private S3Client client;
-    private final String bucketName="progettoedids";
     private final Region region=Region.EU_NORTH_1;
-    public CloudUploader(CloudContainer cc, Item[] inventory) {
+    private final String bucketName="progettoedids";
+    public CloudUploader(CloudContainer cc) {
         //Constructor
         this.cc=cc;
-        this.client=S3Client.builder().region(this.region).credentialsProvider(ProfileCredentialsProvider.create()).build();
+        this.client=S3Client.builder().region(this.region).build();
     }
     //Function to upload the object to the com.cloud
     public boolean upload(){
@@ -47,7 +45,6 @@ public class CloudUploader {
         return true;
     }
     public CloudContainer download(){
-        CloudContainer newCC;
         byte[] data;
         try{
             //Create new request
@@ -58,13 +55,11 @@ public class CloudUploader {
             //Cast bytes to com.cloud.CloudContainer object
             ByteArrayInputStream bin=new ByteArrayInputStream(data);
             ObjectInputStream oin=new ObjectInputStream(bin);
-            newCC=(CloudContainer)oin.readObject();
+            return (CloudContainer)oin.readObject();
         }catch(Exception e) {
             //If an error happens return null (download failed)
             e.printStackTrace();
             return null;
         }
-        //Otherwise return the object
-        return newCC;
     }
 }
