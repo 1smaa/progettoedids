@@ -250,9 +250,11 @@ end
 @enduml
 ```
 
-## Battaglia
+## Battaglia con i boss
 
-![image](https://github.com/1smaa/progettoedids/assets/74701801/1c5a0173-b5b3-4e26-af2e-5d10e09c85c4)
+![image](https://github.com/1smaa/progettoedids/assets/74701801/4694fe09-51da-431c-a8a7-bafabc40477c)
+
+
 
 ```plantuml
 @startuml
@@ -270,52 +272,81 @@ skinparam DatabaseBackgroundColor #00B4D8
 skinparam DatabaseFontColor #03045E
 skinparam BackgroundColor #FFFFFF
 
-actor Giocatore
-participant Main
-participant Boss
-participant Overlay
+actor Player
+participant GameManager
+participant FirstBoss
+participant SecondBoss
+participant ThirdBoss
+participant FinalBoss
+participant Combat
 
-Main --> Giocatore : Alert "Ha inizio la battaglia!"
-activate Main
-Main -> Boss : start()
-activate Boss
-Boss --> Main
-deactivate Boss
-loop PlayerHealth > 0 || BossHealth > 0
-Main --> Giocatore : Alert "Inserisci lettera predefinita"
-Giocatore -> Main
 
-alt Lettera inserita in tempo
-Main -> Boss : decreaseHealth(int quantity)
-activate Boss
-Boss --> Main
-deactivate Boss
+GameManager --> Player : Alert inizio battaglia
+activate GameManager
 
-alt BossHealth < 0
+alt ind = 1
+GameManager -> FirstBoss : phases[ind].onCallback( parameters )
+activate FirstBoss
+FirstBoss -> Combat : start(String s)
+deactivate FirstBoss
+else ind = 2
+GameManager -> SecondBoss : phases[ind].onCallback( parameters )
+activate SecondBoss
+SecondBoss -> Combat :start(String s)
+deactivate SecondBoss
+else ind = 3 
+GameManager -> ThirdBoss : phases[ind].onCallback( parameters )
+activate ThirdBoss
+ThirdBoss -> Combat : start(String s)
+deactivate ThirdBoss
+else ind = 4
+GameManager -> FinalBoss: phases[ind].onCallback( parameters )
+activate FinalBoss
+FinalBoss -> Combat :start(String s)
+deactivate FinalBoss
+end
 
-Main --> Giocatore : Alert "Hai vinto la battaglia!"
+deactivate GameManager
+
+loop entity.health > 0 || player.health > 0
+
+Combat --> Player : Alert "Inserimento lettera"
+activate Combat
+activate Player
+
+Player -> Combat : Lettera
+
+deactivate Combat
+deactivate Player
+
+
+
+alt lettera corretta & inserita in tempo
+Combat -> Combat : entity.health -= player.damage
+activate Combat
+else lettera errata || non inserita in tempo
+
+Combat -> Combat : player.health -= entity.damage
+end
 
 end
 
-else Lettera non inserita in tempo
-Main -> Overlay : setHealth(int healthN)
-activate Overlay
-Main -> Overlay : getHealth()
-Overlay --> Main
-deactivate Overlay
 
-alt PlayerHealth < 0
+Combat --> GameManager : result
+deactivate Combat
+alt res = true
+activate GameManager
+GameManager -> GameManager : ind++
 
-Main --> Giocatore : Alert "Hai perso la battaglia!"
+  alt ind = phases.length
+  GameManager --> Player : Win alert
 
-deactivate Main
+  end
+else res = false
+GameManager --> Player : Game Over Alert
+
+deactivate GameManager
 end
-
-end
-
-end
-
 
 @enduml
-
 ```
