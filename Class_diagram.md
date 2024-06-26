@@ -1,7 +1,7 @@
 
 # Class diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/2c797e52-81dd-4405-a484-8ac404482aab)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/d6ae6db7-970f-419e-b2a7-f5e6e5c2e589)
 
 
 ```plantuml
@@ -81,6 +81,22 @@ class Labirinth {
     + String getCurr()
 }
 
+class CloudContainer {
+    + RoomMap rm
+    + Overlay ov
+    + CloudContainer(RoomMap, Overlay)
+}
+
+class CloudUploader {
+    - CloudContainer cc
+    - S3Client client
+    - {static} String bucketName="progettoedids"
+    - {static} Region region=Region.EU_NORTH_1
+    + CloudUploader(ClooudContainer, Item[])
+    + boolean upload()
+    + CloudContainer download()
+}
+
 class GameManager {
     - RoomMap map
     - Labirinth labirinth
@@ -122,25 +138,6 @@ class RoomMap {
     + void set(int, int, Room)
 }
 
-class Overlay {
-    - String overlay
-    - int health
-    - String[] inventory
-    - int healthMax
-    - int healthStart
-    - int inventoryStart
-    - {static} String HEALTHP=O
-    - {static} String HEALTHN=-
-    - {static} int I_ITEM_SIZE=5
-    + Overlay(String, int, int, int, int, int, String[])
-    - String inventoryFormat(String)
-    + void setHealth(int)
-    + void setInventory(String, int)
-    + String getOverlay()
-    + int getHealth()
-    + String[] getInventory()
-}
-
 class ViewportManager {
     + String overlay
     - {static} char IGNORE=#
@@ -161,27 +158,29 @@ class tester{
     + {static} void main(String[])
 }
 
-RoomMap "*" -right-* "*"  Room : Contiene ed istanzia
+RoomMap "*" -left-* "*"  Room : Contiene ed istanzia
 Combat "1" -right-* "*" Entity : Contiene ed istanzia
-Overlay "1" -left-* "*" Item : Contiene ed istanzia
-Overlay "1" -up-* "*" Entity : Contiene ed istanzia
-LabNode "*" --* "*" Room : Contiene ed istanzia
+GameManager "1" --* "*" Item : Contiene ed istanzia
+LabNode "*" -right-* "*" Room : Contiene ed istanzia
 Labirinth "1" -right-* "*" LabNode : Contiene ed istanzia
-GameManager "1" -down-> "*" RoomMap : Utilizza
+GameManager "1" -up-> "*" RoomMap : Utilizza
 GameManager "1" -left-* "*" Entity : Contiene ed istanzia
-GameManager "1" -up-> "1" Labirinth : Utilizza
+GameManager "1" --> "1" Labirinth : Utilizza
 GameManager "1" -down-> "1" ViewportManager : Utilizza
-ViewportManager "1" -down-> "1" Overlay : Utilizza
 tester "1" -up-> "1" GameManager : Lancia
 FirstBoss "1" --* "*" Entity : Contiene ed istanzia
 SecondBoss "1" --* "*" Entity : Contiene ed istanzia
 ThirdBoss "1" --* "*" Entity : Contiene ed istanzia
 FinalBoss "1" --* "*" Entity : Contiene ed istanzia
+CloudUploader "1" --* "1" CloudContainer : Contiene ed istanzia
+CloudContainer "1" --> "*" RoomMap : Contiene
+CloudContainer "1" --> "*" Entity : Contiene
+CloudContainer "1" --> "1" GameManager : Contiene
 CallBack .down.> FinalBoss
 CallBack .down.> FirstBoss
 CallBack .down.> SecondBoss
 CallBack .down.> ThirdBoss
-CallBack ..> Labirinth
+CallBack .up.> Labirinth
 
 @enduml
 ```
