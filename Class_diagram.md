@@ -1,7 +1,7 @@
 
 # Class diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/d6ae6db7-970f-419e-b2a7-f5e6e5c2e589)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/8357ae64-b317-4dea-8442-5148f57b6a46)
 
 
 ```plantuml
@@ -168,10 +168,10 @@ GameManager "1" -left-* "*" Entity : Contiene ed istanzia
 GameManager "1" --> "1" Labirinth : Utilizza
 GameManager "1" -down-> "1" ViewportManager : Utilizza
 tester "1" -up-> "1" GameManager : Lancia
-FirstBoss "1" --* "*" Entity : Contiene ed istanzia
-SecondBoss "1" --* "*" Entity : Contiene ed istanzia
-ThirdBoss "1" --* "*" Entity : Contiene ed istanzia
-FinalBoss "1" --* "*" Entity : Contiene ed istanzia
+FirstBoss "1" --* "1" Entity : Contiene ed istanzia
+SecondBoss "1" --* "1" Entity : Contiene ed istanzia
+ThirdBoss "1" --* "1" Entity : Contiene ed istanzia
+FinalBoss "1" --* "1" Entity : Contiene ed istanzia
 CloudUploader "1" --* "1" CloudContainer : Contiene ed istanzia
 CloudContainer "1" --> "*" RoomMap : Contiene
 CloudContainer "1" --> "*" Entity : Contiene
