@@ -56,9 +56,9 @@ player->games: quit
 
 # Internal Sequence Diagrams
 
-## move(int code)
+## move(char code)
 
-![image](https://github.com/1smaa/progettoedids/assets/74701801/28c56721-d4ca-490c-bae4-1ad52747f80b)
+![image](https://github.com/1smaa/progettoedids/assets/74701801/9d02bae3-02fa-4088-8b65-4ecddcfef9fe)
 
 
 ```plantuml
@@ -77,50 +77,57 @@ skinparam DatabaseBackgroundColor #00B4D8
 skinparam DatabaseFontColor #03045E
 skinparam BackgroundColor #FFFFFF
 
-actor Giocatore
+actor Player
+database games
 participant RoomMap
 participant Room
 database File
 
 
+Player -> games : 'w' || 'a' || 's' || 'd'
 
-Giocatore -> RoomMap : move(int code)
+games -> RoomMap : move(char code)
 activate RoomMap
 
 
-alt code == 1
+alt code == 'w'
 RoomMap -> RoomMap : newY--
 
-else code == 2
+else code == 's'
 RoomMap -> RoomMap : newY++
 
-else code == 3
+else code == 'a'
 RoomMap -> RoomMap : newX--
 
-else code == 4
+else code == 'd'
 RoomMap -> RoomMap : newX++
 
 end
 
 RoomMap -> RoomMap : checkBounds(newX, newY)
-RoomMap -> Room : current = rooms[newX][newY]
+RoomMap -> Room : rooms[newY][newX].valid()
 activate Room
-Room --> RoomMap : room
+Room --> RoomMap : 
 RoomMap -> Room : load()
 
 Room -> File : scanner(filename)
 activate File
 File --> Room
-Room --> RoomMap : String result
+Room --> RoomMap
+RoomMap --> games
 alt 
 File --> Room : FileNotFoundException()
 deactivate File
 Room --> RoomMap : FileNotFoundException()
+RoomMap --> games
 end
+
+games --> Player
 deactivate Room
 deactivate RoomMap
 
 @enduml
+
 
 ```
 
