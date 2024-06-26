@@ -58,7 +58,7 @@ player->games: quit
 
 ## move(char code)
 
-![image](https://github.com/1smaa/progettoedids/assets/74701801/9d02bae3-02fa-4088-8b65-4ecddcfef9fe)
+![image](https://github.com/1smaa/progettoedids/assets/74701801/e25f1e4f-6a91-4b97-a301-7e27f69fa37c)
 
 
 ```plantuml
@@ -85,7 +85,6 @@ database File
 
 
 Player -> games : 'w' || 'a' || 's' || 'd'
-
 games -> RoomMap : move(char code)
 activate RoomMap
 
@@ -119,7 +118,9 @@ alt
 File --> Room : FileNotFoundException()
 deactivate File
 Room --> RoomMap : FileNotFoundException()
+deactivate Room
 RoomMap --> games
+deactivate RoomMap
 end
 
 games --> Player
@@ -127,6 +128,7 @@ deactivate Room
 deactivate RoomMap
 
 @enduml
+
 
 
 ```
