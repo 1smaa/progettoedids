@@ -133,9 +133,9 @@ deactivate RoomMap
 
 ```
 
-## Save(string saveName, int saveType)
+## Save game
 
-![image](https://github.com/1smaa/progettoedids/assets/74701801/289272f3-6894-4fbe-b722-91131f76553b)
+![image](https://github.com/1smaa/progettoedids/assets/74701801/26adf408-3dc0-4063-bc9c-8c3665554cf1)
 
 
 ```plantuml
@@ -154,98 +154,33 @@ skinparam DatabaseBackgroundColor #00B4D8
 skinparam DatabaseFontColor #03045E
 skinparam BackgroundColor #FFFFFF
 
-actor Giocatore
-participant Main
-participant RoomMap
-participant Overlay
-database File
+actor Player
+database games
+participant CloudContainer
+participant CloudUploader
 database AWS
 
-Giocatore -> Main : Save(string saveName, int saveType)
+Player -> games : "p"
 
-activate Main
+activate games
 
-Main -> RoomMap : getCurr()
-activate RoomMap
-RoomMap --> Main :
-deactivate RoomMap
+games -> CloudContainer : cc.player=player / cc.roomMap= roomMap / cc.GameManager=GameManager
+games -> CloudUploader : upload()
+activate CloudUploader
+CloudUploader -> AWS : putObject()
 
+CloudUploader --> games : res
 
-Main -> Overlay : getOverlay()
-activate Overlay
-Overlay --> Main :
+deactivate CloudUploader
 
-Main -> Overlay : getHealth()
-Overlay --> Main :
+alt res = true
+games --> Player : Alert Successfully saved
 
-Main -> Overlay : getInventory()
-Overlay --> Main :
-
-deactivate Overlay
-
-alt saveType == 1
-
-alt connessione internet funzionante
-
-Main -> Main : checkFileName()
-
-alt Valid name
-
-Main -> AWS : Salvataggio Online (saveName)
-activate AWS
-Main --> Giocatore : Alert "Salvataggio completato!"
-
-else Invalid name
-Main --> Giocatore : Alert "Salvataggio già presente"
-
-loop invalid
-Main -> Giocatore : Alert "Inserire nuovo nome salvataggio"
-Giocatore --> Main
-Main -> AWS : Salvataggio Online (saveName)
-deactivate AWS
-
-Main -> Giocatore : Alert "Salvataggio completato!"
-
+else res = false
+games --> Player : Alert Game not Saved
 end
-end
+deactivate games
 
-
-else connessione internet non funzionante
-
-Main --> Giocatore : alert "Internet non funzionante"
-
-end
-
-else saveType == 2
-Main -> Main : checkFileName()
-
-alt Valid name
-
-Main -> File : Salvataggio Offline(saveName)
-activate File
-Main --> Giocatore : Alert "Salvataggio completato!"
-
-else Invalid name
-Main --> Giocatore : Alert "Salvataggio già presente"
-
-loop invalid
-Main -> Giocatore : Alert "Inserire nuovo nome salvataggio"
-Giocatore --> Main
-Main -> File : Salvataggio Offline(saveName)
-deactivate File
-
-Main -> Giocatore : Alert "Salvataggio completato!"
-
-end
-end
-Main -> File : Salvataggio Offline (saveName)
-activate File
-File --> Main
-deactivate File
-Main --> Giocatore : Alert "Salvataggio completato!"
-
-deactivate Main
-end
 
 @enduml
 ```
