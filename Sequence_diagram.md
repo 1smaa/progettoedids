@@ -58,7 +58,8 @@ player->games: quit
 
 ## move(int code)
 
-![image](https://github.com/1smaa/progettoedids/assets/74701801/f4bbf748-605e-460f-947b-5a8f40294b95)
+![image](https://github.com/1smaa/progettoedids/assets/74701801/28c56721-d4ca-490c-bae4-1ad52747f80b)
+
 
 ```plantuml
 @startuml
@@ -113,9 +114,9 @@ File --> Room
 Room --> RoomMap : String result
 alt 
 File --> Room : FileNotFoundException()
+deactivate File
 Room --> RoomMap : FileNotFoundException()
 end
-deactivate File
 deactivate Room
 deactivate RoomMap
 
