@@ -26,15 +26,18 @@ Europe's second-oldest, where knowledge sprawls.*/
         nOver=nOver.replace("2","Solve the following riddle to continue.             ");
         tester.clearConsole();
         System.out.println(nOver);
-        try{ Thread.sleep(10000); } catch(InterruptedException e){}
+        try{ Thread.sleep(5000); } catch(InterruptedException e){}
         tester.clearConsole();
-        nOver=overlay;
-        nOver=nOver.replace("1","Where Galileo once taught among old canals,         ");
-        nOver=nOver.replace("2","Europe's second-oldest, where knowledge sprawls.    ");
-        System.out.println(nOver);
+        File multin=new File("src/main/resources/mult.txt");
+        String mult="";
+        try{
+            Scanner scan=new Scanner(multin);
+            while(scan.hasNextLine()) mult+=scan.nextLine()+"\n";
+        }catch(FileNotFoundException e){ return false; }
+        System.out.println(mult);
         Scanner scan=new Scanner(System.in);
         String response=scan.nextLine().toLowerCase();
-        if(!response.equals("university of padua")) return false;
+        if(!response.toLowerCase().equals("a")) return false;
         nOver=overlay;
         nOver=nOver.replace("1","Choose your weapon                                  ");
         String nln="1- #1  2- #2  3- #3  4- #4";
