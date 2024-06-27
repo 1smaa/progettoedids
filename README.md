@@ -1,4 +1,4 @@
-Ciao!
+<p align="center"> <h1> Ciao! </h1> </p>
 
 Sei pronto ad immergerti in un gioco fatto di *indovinelli*, *combattimenti* e *velocità*?
 
@@ -17,7 +17,11 @@ Prima di partire, ecco a te le **istruzioni** per poter avviare il gioco:
 
 1. Come prima cosa, scarica il progetto collegandoti a Github, ecco a te il link della repository: https://github.com/1smaa/progettoedids
 2. Scarica la cartella del gioco, cliccando su “*Download ZIP”*:
+<p align="center">
 
+<img width="458" alt="image" src="https://github.com/1smaa/progettoedids/assets/74701801/6d2d7fa8-cef3-42fa-bd44-7de8c810e658">
+  
+</p>
 
 
 1. Estrai la cartella
