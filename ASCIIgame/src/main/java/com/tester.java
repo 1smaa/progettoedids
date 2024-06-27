@@ -49,6 +49,7 @@ public class tester {
         Entity player=new Entity("Player",10,1,1);
         GameManager gm=new GameManager(player,map,labirinth);
         int result;
+        boolean saved=false;
         Scanner sc=new Scanner(System.in);
         String overlay="";
         try{
@@ -70,8 +71,18 @@ public class tester {
         do{
             System.out.println(vp.format(map.curr()));
             char c=sc.next().charAt(0);
-            if(c=='q') return;
-            if(c=='p') cloudSave(player,map,gm);
+            if(c=='q') {
+                if(!saved){
+                    tester.clearConsole();
+                    System.out.println("Your progresses have not been saved? Are you sure you want to exit? (Y/N)");
+                    String r=sc.next();
+                    if(r.equals("y")){return;}
+                } else return;
+            }
+            if(c=='p') {
+                cloudSave(player, map, gm);
+                saved=true;
+            }
             clearConsole();
             try{
                 result=gm.move(c);
