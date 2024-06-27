@@ -1,2 +1,15 @@
-com\atomic\EntityTest.class
+com\boss\LabNodeTest$TestRoom.class
+com\boss\LabNodeTest.class
+com\boss\FirstBossTest.class
+com\boss\CombatTest.class
+com\boss\LabirinthTest.class
+com\game\RoomMapTest.class
 com\atomic\ItemTest.class
+com\cloud\CloudUploaderTest.class
+com\cloud\CloudUploaderTest$2.class
+com\atomic\EntityTest.class
+com\game\RoomTest.class
+com\viewport\ViewportManagerTest.class
+com\boss\LabirinthTest$TestRoom.class
+com\cloud\CloudUploaderTest$1.class
+com\game\GameManagerTest.class

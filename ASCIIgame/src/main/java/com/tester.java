@@ -1,4 +1,4 @@
-package test;
+package com;
 
 import com.atomic.Entity;
 import com.boss.Labirinth;

@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CloudUploaderTest {
 
-    private final String bucketName = "progettoedids";
+    private final String bucketName = "prog";
     private final S3Client s3Client = S3Client.builder().region(Region.EU_NORTH_1).build();
 
     @Test
@@ -87,10 +87,10 @@ public class CloudUploaderTest {
                 PutObjectRequest req = PutObjectRequest.builder().bucket("invalid-bucket-name").key("cc").build();
                 try (ByteArrayOutputStream bos = new ByteArrayOutputStream();
                      ObjectOutputStream oos = new ObjectOutputStream(bos)) {
-                    oos.writeObject(this.cc);
+                    oos.writeObject(cc);
                     oos.flush();
                     byte[] barr = bos.toByteArray();
-                    this.client.putObject(req, RequestBody.fromBytes(barr));
+                    s3Client.putObject(req, RequestBody.fromBytes(barr));
                 } catch (Exception e) {
                     e.printStackTrace();
                     return false;
@@ -114,7 +114,7 @@ public class CloudUploaderTest {
             public CloudContainer download() {
                 try {
                     GetObjectRequest req = GetObjectRequest.builder().key("cc").bucket("invalid-bucket-name").build();
-                    ResponseBytes<GetObjectResponse> objBytes = this.client.getObjectAsBytes(req);
+                    ResponseBytes<GetObjectResponse> objBytes = s3Client.getObjectAsBytes(req);
                     byte[] data = objBytes.asByteArray();
                     ByteArrayInputStream bin = new ByteArrayInputStream(data);
                     ObjectInputStream oin = new ObjectInputStream(bin);
