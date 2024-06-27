@@ -5,9 +5,9 @@
 
 2.	⁠As a player ⁠i want a pausing menu⁠ ⁠so that I can terminate, resume or save my game
 	-	Display the game menu whenever I am in the game and I press P on my keyboard 
-	-	Display the "Resume" button so that I can exit the menu and continue the game
-	-	Display the "Save" button so that I can save the current game
-	-	Display the "Exit" button so that I can exit the game
+	-	Display the "Resume" option so that I can exit the menu and continue the game
+	-	Display the "Save" option so that I can save the current game
+	-	Display the "Exit" option so that I can exit the game
 
 3.	As a player I want an inventory
 	-	The inventory has to be displayed at all times when I am playing
