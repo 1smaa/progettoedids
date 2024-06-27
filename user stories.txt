@@ -41,15 +41,7 @@
 	so that I can continue the game
 	-	Choose the option I want
 
-7.	As a player I want to be able to see the map
-	As a player
-	I want to be able to see the map
-	So that I can move accordingly
-	-	Display rooms
-	-	Show items and entities
-
 8.	As I player I want to complete the game
 	As a player
 	I want to complete the game
 	-	I want to win or lose as a consequence of my actions
-	-	when I arrive at the end of the game I want to choose between the 2 endings
