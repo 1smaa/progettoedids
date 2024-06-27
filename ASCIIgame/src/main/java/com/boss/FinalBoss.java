@@ -3,7 +3,7 @@ package com.boss;
 import com.atomic.Entity;
 import com.atomic.Item;
 import com.game.RoomMap;
-import test.tester;
+import com.tester;
 
 import java.io.File;
 import java.io.FileNotFoundException;
