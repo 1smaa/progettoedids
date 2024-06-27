@@ -1,4 +1,5 @@
 ![image](https://github.com/1smaa/progettoedids/assets/77068062/eb01bb4f-f3a0-4fbe-8c7f-32a476357061)
+
 @startuml
 object Entity{
 health
