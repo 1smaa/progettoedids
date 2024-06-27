@@ -1,5 +1,9 @@
-![image](https://github.com/1smaa/progettoedids/assets/77068062/eb01bb4f-f3a0-4fbe-8c7f-32a476357061)
 
+# Domain model
+
+![domainModel](https://github.com/1smaa/progettoedids/assets/77068062/a85bcd9c-f3d6-43ac-b47b-d1597916698f)
+
+```plantuml
 @startuml
 object Entity{
 health
@@ -27,3 +31,4 @@ Bucket "1"-"1" Map: saves
 Bucket "1"-"1" Entity: saves
 Map "1"->"1" Labirinth: incorporates
 @enduml
+```
