@@ -1,54 +1,27 @@
-
-# Domain model
-
-![domainModel](https://github.com/1smaa/progettoedids/assets/169902818/e4fc6649-8be3-4d64-b700-47684b3c2428)
-
-
-```plantuml
 @startuml
-
-object Player{
+object Entity{
 health
 damage
+speed
 position
 }
-
-object Enemy{
-health
-damage
-position
-}
-
-object Map{
-size
-}
-
-object Room{
-size
-position
-}
-
+object Fight
 object Item{
-position
-damage
+weight
+name
 }
-
-object Game{
-alive
-}
-
-object Inventory{
-size
-}
-
-Player "1" -> "1" Inventory : has
-Player "1" -> "*" Game: creates
-Inventory "1"-down->"*" Item: contains
-Map "1"-down-> "1" Player
-Game "1" -> "1" Map: loads
-Map "1"-up->"*" Room: contains
-Map "1" -> "*" Enemy: spawns
-Enemy "1" -> "1" Item: drops
-
+object Bucket
+object Map
+object Room
+object Labirinth
+object Inventory
+Entity "1"-left>"1" Inventory: has
+Inventory "1"-up-"*" Item : contains
+Map "1"->"1..." Room : contains
+Fight"1"->"0...1" Item: awards
+Entity "2"->"1" Fight: fights
+Entity "1..."-up-"1" Map: roams
+Bucket "1"-"1" Map: saves
+Bucket "1"-"1" Entity: saves
+Map "1"->"1" Labirinth: incorporates
 @enduml
-```
