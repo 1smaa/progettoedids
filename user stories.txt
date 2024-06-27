@@ -41,7 +41,7 @@
 	so that I can continue the game
 	-	Choose the option I want
 
-8.	As I player I want to complete the game
+7.	As I player I want to complete the game
 	As a player
 	I want to complete the game
 	-	I want to win or lose as a consequence of my actions
