@@ -1,7 +1,7 @@
 
 # Class diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/8357ae64-b317-4dea-8442-5148f57b6a46)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/d6cbb2bb-4e32-400f-910e-08b32229858b)
 
 
 ```plantuml
@@ -83,8 +83,8 @@ class Labirinth {
 
 class CloudContainer {
     + RoomMap rm
-    + Overlay ov
-    + CloudContainer(RoomMap, Overlay)
+    + GameManager gm
+    + Entity player
 }
 
 class CloudUploader {
@@ -92,7 +92,7 @@ class CloudUploader {
     - S3Client client
     - {static} String bucketName="progettoedids"
     - {static} Region region=Region.EU_NORTH_1
-    + CloudUploader(ClooudContainer, Item[])
+    + CloudUploader(ClooudContainer)
     + boolean upload()
     + CloudContainer download()
 }
