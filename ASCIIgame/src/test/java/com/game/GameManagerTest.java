@@ -14,8 +14,8 @@ public class GameManagerTest {
         // Create entities
         Entity player = new Entity("player", 10, 1, 2); // health = 10, speed = 1, damage = 2
         Room[][] rooms = {
-                {new Room("room1.txt", 1), new Room("room2.txt", 2)},
-                {new Room("room3.txt", 3), new Room("room4.txt", 4)}
+                {new Room("src/main/resources/Rooms/1.txt", 1), new Room("src/main/resources/Rooms/2.txt", 2)},
+                {new Room("src/main/resources/Rooms/3.txt", 3), new Room("src/main/resources/Rooms/4.txt", 4)}
         };
         RoomMap map = new RoomMap(rooms, 0, 0);
         Labirinth labirinth = new Labirinth(null);
@@ -37,10 +37,10 @@ public class GameManagerTest {
         // Create entities
         Entity player = new Entity("player", 10, 1, 2); // health = 10, speed = 1, damage = 2
         Room[][] rooms = {
-                {new Room("room1.txt", 1), new Room("room2.txt", 2)},
-                {new Room("room3.txt", 3), new Room("room4.txt", 4)},
-                {new Room("room5.txt", 5), new Room("room6.txt", 6)},
-                {new Room("room7.txt", 7), new Room("room8.txt", 8)}
+                {new Room("src/main/resources/Rooms/1.txt", 1), new Room("src/main/resources/Rooms/2.txt", 2)},
+                {new Room("src/main/resources/Rooms/3.txt", 3), new Room("src/main/resources/Rooms/4.txt", 4)},
+                {new Room("src/main/resources/Rooms/5.txt", 5), new Room("src/main/resources/Rooms/6.txt", 6)},
+                {new Room("src/main/resources/Rooms/7.txt", 7), new Room("src/main/resources/Rooms/8.txt", 8)}
         };
         RoomMap map = new RoomMap(rooms, 0, 0);
         Labirinth labirinth = new Labirinth(null);

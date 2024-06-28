@@ -1,11 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.game.GameManagerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0 s <<< FAILURE! -- in com.game.GameManagerTest
-com.game.GameManagerTest.testMovePlayerWins -- Time elapsed: 0 s <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.032 s <<< FAILURE! -- in com.game.GameManagerTest
+com.game.GameManagerTest.testMovePlayerWins -- Time elapsed: 0.018 s <<< ERROR!
 java.io.FileNotFoundException
-	at com.game.Room.<init>(Room.java:14)
-	at com.game.GameManagerTest.testMovePlayerWins(GameManagerTest.java:39)
+	at com.game.Room.<init>(Room.java:20)
+	at com.game.RoomMap.<init>(RoomMap.java:18)
+	at com.game.GameManagerTest.testMovePlayerWins(GameManagerTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
@@ -77,8 +78,9 @@ java.io.FileNotFoundException
 
 com.game.GameManagerTest.testMoveBossWins -- Time elapsed: 0 s <<< ERROR!
 java.io.FileNotFoundException
-	at com.game.Room.<init>(Room.java:14)
-	at com.game.GameManagerTest.testMoveBossWins(GameManagerTest.java:16)
+	at com.game.Room.<init>(Room.java:20)
+	at com.game.RoomMap.<init>(RoomMap.java:18)
+	at com.game.GameManagerTest.testMoveBossWins(GameManagerTest.java:20)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)

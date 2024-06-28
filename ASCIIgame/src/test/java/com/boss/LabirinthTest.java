@@ -14,7 +14,7 @@ public class LabirinthTest {
     // we created a TestRoom class so that we can override the load() method and avoid using an actual I/O file
     class TestRoom extends Room {
         public TestRoom() throws FileNotFoundException {
-            super("testfile.txt", 1);
+            super("src/test/resources/testroom.txt", 1);
         }
 
         @Override
@@ -97,12 +97,15 @@ public class LabirinthTest {
     public void testOnCallback() throws FileNotFoundException {
         LabNode n=new LabNode(null,null,null,new TestRoom());
         LabNode head = new LabNode(n,n,null,new TestRoom());
-        head.setBack(n);
+        n.setBack(head);
         n.toogleFlag();
         Labirinth labirinth = new Labirinth(head);
 
         Entity player = new Entity("player", 8, 3, 5);
         Room[][] rooms = new Room[2][2];
+        for(int i=0;i<2;i++){
+            for(int j=0;j<2;j++) rooms[i][j]=new TestRoom();
+        }
         RoomMap roomMap = new RoomMap(rooms, 0, 0);
         Item[] inventory = new Item[1];
 
