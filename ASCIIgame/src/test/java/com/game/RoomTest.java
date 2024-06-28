@@ -21,7 +21,7 @@ public class RoomTest {
 
         // test constructor 1
         System.out.println("Test constructor 1");
-        room = new Room("validFile", 1);
+        room = new Room(validFile, 1);
 
         // test constructor 2
         System.out.println("Test constructor 2");

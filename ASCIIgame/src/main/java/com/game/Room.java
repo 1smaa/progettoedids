@@ -11,13 +11,13 @@ public class Room implements Serializable {
     private boolean isValid;
     public Room(String fn,int id) throws FileNotFoundException{
         //check for file existence
-        new File(fn);
+        if(!(new File(fn).exists())) throw new FileNotFoundException();
         this.fileName=fn;
         this.id=id;
         this.isValid=false;
     }
     public Room(String fn,int id,boolean valid) throws FileNotFoundException{
-        new File(fn);
+        if(!(new File(fn).exists())) throw new FileNotFoundException();
         this.fileName=fn;
         this.id=id;
         this.isValid=valid;

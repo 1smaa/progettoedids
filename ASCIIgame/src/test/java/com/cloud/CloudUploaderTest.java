@@ -18,13 +18,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CloudUploaderTest {
 
-    private final String bucketName = "prog";
+    private final String bucketName = "progettoedids";
     private final S3Client s3Client = S3Client.builder().region(Region.EU_NORTH_1).build();
 
     @Test
     public void testUpload() throws IOException, ClassNotFoundException {
-        // Create a temporary bucket for testing
-        s3Client.createBucket(CreateBucketRequest.builder().bucket(bucketName).build());
 
         // Create a CloudContainer object
         CloudContainer cc = new CloudContainer();
@@ -43,17 +41,10 @@ public class CloudUploaderTest {
         CloudContainer downloadedCc = (CloudContainer) oin.readObject();
 
         assertNotNull(downloadedCc, "Downloaded CloudContainer should not be null");
-
-        // Clean up
-        s3Client.deleteObject(DeleteObjectRequest.builder().bucket(bucketName).key("cc").build());
-        s3Client.deleteBucket(DeleteBucketRequest.builder().bucket(bucketName).build());
     }
 
     @Test
     public void testDownload() throws IOException, ClassNotFoundException {
-        // Create a temporary bucket for testing
-        s3Client.createBucket(CreateBucketRequest.builder().bucket(bucketName).build());
-
         // Prepare and upload a CloudContainer object
         CloudContainer cc = new CloudContainer();
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -69,10 +60,6 @@ public class CloudUploaderTest {
         CloudUploader uploader = new CloudUploader(cc);
         CloudContainer downloadedCc = uploader.download();
         assertNotNull(downloadedCc, "Downloaded CloudContainer should not be null");
-
-        // Clean up
-        s3Client.deleteObject(DeleteObjectRequest.builder().bucket(bucketName).key("cc").build());
-        s3Client.deleteBucket(DeleteBucketRequest.builder().bucket(bucketName).build());
     }
 
     @Test

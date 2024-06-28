@@ -95,16 +95,14 @@ public class LabirinthTest {
     // test onCallBack() method (ci mette una vita e non finisce mai)
     @Test
     public void testOnCallback() throws FileNotFoundException {
-        LabNode head = createTestLabNode();
+        LabNode n=new LabNode(null,null,null,new TestRoom());
+        LabNode head = new LabNode(n,n,null,new TestRoom());
+        head.setBack(n);
+        n.toogleFlag();
         Labirinth labirinth = new Labirinth(head);
 
         Entity player = new Entity("player", 8, 3, 5);
         Room[][] rooms = new Room[2][2];
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
-                rooms[i][j] = new TestRoom();
-            }
-        }
         RoomMap roomMap = new RoomMap(rooms, 0, 0);
         Item[] inventory = new Item[1];
 

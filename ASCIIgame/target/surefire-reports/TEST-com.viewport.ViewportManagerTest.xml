@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.viewport.ViewportManagerTest" time="0.023" tests="6" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame\target\test-classes;C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame\target\classes;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\regions\2.25.57\regions-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\annotations\2.25.57\annotations-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\utils\2.25.57\utils-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sdk-core\2.25.57\sdk-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\profiles\2.25.57\profiles-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\json-utils\2.25.57\json-utils-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\auth\2.25.57\auth-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\identity-spi\2.25.57\identity-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-client-spi\2.25.57\http-client-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth-aws\2.25.57\http-auth-aws-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth\2.25.57\http-auth-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth-spi\2.25.57\http-auth-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\eventstream\eventstream\1.0.1\eventstream-1.0.1.jar;C:\Users\Lorenzon\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Lorenzon\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\apache-client\2.25.57\apache-client-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\metrics-spi\2.25.57\metrics-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Lorenzon\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Lorenzon\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Lorenzon\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sso\2.25.57\sso-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\protocol-core\2.25.57\protocol-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-json-protocol\2.25.57\aws-json-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-core\2.25.57\aws-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\endpoints-spi\2.25.57\endpoints-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\ssooidc\2.25.57\ssooidc-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\third-party-jackson-core\2.25.57\third-party-jackson-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3-transfer-manager\2.25.57\s3-transfer-manager-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\arns\2.25.57\arns-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\secretsmanager\2.25.57\secretsmanager-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3control\2.25.57\s3control-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-xml-protocol\2.25.57\aws-xml-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Lorenzon\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lorenzon\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\netty-nio-client\2.25.57\netty-nio-client-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec-http\4.1.108.Final\netty-codec-http-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec-http2\4.1.108.Final\netty-codec-http2-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec\4.1.108.Final\netty-codec-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport\4.1.108.Final\netty-transport-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-common\4.1.108.Final\netty-common-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-buffer\4.1.108.Final\netty-buffer-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-handler\4.1.108.Final\netty-handler-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.108.Final\netty-transport-native-unix-common-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.108.Final\netty-transport-classes-epoll-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-resolver\4.1.108.Final\netty-resolver-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sts\2.25.57\sts-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-query-protocol\2.25.57\aws-query-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3\2.25.57\s3-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\crt-core\2.25.57\crt-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\checksums\2.25.57\checksums-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\checksums-spi\2.25.57\checksums-spi-2.25.57.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Rome"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
+    <property name="sun.java.command" value="C:\Users\Lorenzon\AppData\Local\Temp\surefire3500735769626797117\surefirebooter-20240628151841149_3.jar C:\Users\Lorenzon\AppData\Local\Temp\surefire3500735769626797117 2024-06-28T15-18-40_891-jvmRun1 surefire-20240628151841149_1tmp surefire_0-20240628151841149_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame\target\test-classes;C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame\target\classes;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\regions\2.25.57\regions-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\annotations\2.25.57\annotations-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\utils\2.25.57\utils-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sdk-core\2.25.57\sdk-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\profiles\2.25.57\profiles-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\json-utils\2.25.57\json-utils-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\auth\2.25.57\auth-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\identity-spi\2.25.57\identity-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-client-spi\2.25.57\http-client-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth-aws\2.25.57\http-auth-aws-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth\2.25.57\http-auth-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth-spi\2.25.57\http-auth-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\eventstream\eventstream\1.0.1\eventstream-1.0.1.jar;C:\Users\Lorenzon\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Lorenzon\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\apache-client\2.25.57\apache-client-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\metrics-spi\2.25.57\metrics-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Lorenzon\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Lorenzon\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Lorenzon\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sso\2.25.57\sso-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\protocol-core\2.25.57\protocol-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-json-protocol\2.25.57\aws-json-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-core\2.25.57\aws-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\endpoints-spi\2.25.57\endpoints-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\ssooidc\2.25.57\ssooidc-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\third-party-jackson-core\2.25.57\third-party-jackson-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3-transfer-manager\2.25.57\s3-transfer-manager-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\arns\2.25.57\arns-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\secretsmanager\2.25.57\secretsmanager-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3control\2.25.57\s3control-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-xml-protocol\2.25.57\aws-xml-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Lorenzon\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lorenzon\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\netty-nio-client\2.25.57\netty-nio-client-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec-http\4.1.108.Final\netty-codec-http-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec-http2\4.1.108.Final\netty-codec-http2-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec\4.1.108.Final\netty-codec-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport\4.1.108.Final\netty-transport-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-common\4.1.108.Final\netty-common-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-buffer\4.1.108.Final\netty-buffer-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-handler\4.1.108.Final\netty-handler-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.108.Final\netty-transport-native-unix-common-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.108.Final\netty-transport-classes-epoll-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-resolver\4.1.108.Final\netty-resolver-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sts\2.25.57\sts-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-query-protocol\2.25.57\aws-query-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3\2.25.57\s3-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\crt-core\2.25.57\crt-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\checksums\2.25.57\checksums-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\checksums-spi\2.25.57\checksums-spi-2.25.57.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Lorenzon"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lorenzon\AppData\Local\Temp\surefire3500735769626797117\surefirebooter-20240628151841149_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.1+8-16"/>
+    <property name="user.name" value="Lorenzon"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Lorenzon\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lorenzon\AppData\Local\Temp\"/>
+    <property name="java.version" value="22.0.1"/>
+    <property name="user.dir" value="C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Lorenzon\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Lorenzon\AppData\Local\Programs\Python\Python312\;C:\Users\Lorenzon\AppData\Local\Microsoft\WindowsApps;C:\Users\Lorenzon\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Spice64\bin;C:\VSARM\armcc\bin;C:\msys64\mingw32\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.3\bin;;C:\apache-maven-3.9.8\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.1+8-16"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="testFormatWithoutOverlay" classname="com.viewport.ViewportManagerTest" time="0.005">
+    <system-out><![CDATA[tets format() method without using an overlay
+]]></system-out>
+  </testcase>
+  <testcase name="testFormatWithLongerViewport" classname="com.viewport.ViewportManagerTest" time="0.003">
+    <error message="Index 3 out of bounds for length 3" type="java.lang.StringIndexOutOfBoundsException"><![CDATA[java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.lang.String.checkIndex(String.java:4881)
+	at java.base/java.lang.AbstractStringBuilder.setCharAt(AbstractStringBuilder.java:540)
+	at java.base/java.lang.StringBuilder.setCharAt(StringBuilder.java:91)
+	at com.viewport.ViewportManager.format(ViewportManager.java:22)
+	at com.viewport.ViewportManagerTest.testFormatWithLongerViewport(ViewportManagerTest.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-out><![CDATA[tets format() method with viewport.length() > overlay.length()
+]]></system-out>
+  </testcase>
+  <testcase name="testFormatWithOverlay" classname="com.viewport.ViewportManagerTest" time="0.0">
+    <error message="Index 3 out of bounds for length 3" type="java.lang.StringIndexOutOfBoundsException"><![CDATA[java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.lang.String.checkIndex(String.java:4881)
+	at java.base/java.lang.AbstractStringBuilder.setCharAt(AbstractStringBuilder.java:540)
+	at java.base/java.lang.StringBuilder.setCharAt(StringBuilder.java:91)
+	at com.viewport.ViewportManager.format(ViewportManager.java:22)
+	at com.viewport.ViewportManagerTest.testFormatWithOverlay(ViewportManagerTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-out><![CDATA[tets format() method using an overlay
+]]></system-out>
+  </testcase>
+  <testcase name="testFormatWithEmptyViewport" classname="com.viewport.ViewportManagerTest" time="0.0">
+    <system-out><![CDATA[tets format() method with empty overlay
+]]></system-out>
+  </testcase>
+  <testcase name="testSetAndGetOverlay" classname="com.viewport.ViewportManagerTest" time="0.0">
+    <system-out><![CDATA[tets getOverlay() and setOverlay()
+]]></system-out>
+  </testcase>
+  <testcase name="testConstructor" classname="com.viewport.ViewportManagerTest" time="0.0">
+    <system-out><![CDATA[tets default constructor
+]]></system-out>
+  </testcase>
+</testsuite>
