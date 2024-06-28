@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.game.RoomMapTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! -- in com.game.RoomMapTest
+Tests run: 7, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.048 s <<< FAILURE! -- in com.game.RoomMapTest
 com.game.RoomMapTest.testMoveOutOfBounds -- Time elapsed: 0 s <<< ERROR!
 java.io.FileNotFoundException
 	at com.game.Room.<init>(Room.java:20)
@@ -148,7 +148,7 @@ java.io.FileNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.game.RoomMapTest.testMove -- Time elapsed: 0 s <<< ERROR!
+com.game.RoomMapTest.testMove -- Time elapsed: 0.015 s <<< ERROR!
 java.io.FileNotFoundException
 	at com.game.Room.<init>(Room.java:20)
 	at com.game.RoomMapTest.testMove(RoomMapTest.java:60)
@@ -221,7 +221,7 @@ java.io.FileNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.game.RoomMapTest.testHasLast -- Time elapsed: 0.015 s <<< ERROR!
+com.game.RoomMapTest.testHasLast -- Time elapsed: 0 s <<< ERROR!
 java.io.FileNotFoundException
 	at com.game.Room.<init>(Room.java:20)
 	at com.game.RoomMapTest.testHasLast(RoomMapTest.java:86)
@@ -367,7 +367,7 @@ java.io.FileNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.game.RoomMapTest.testConstructor -- Time elapsed: 0 s <<< ERROR!
+com.game.RoomMapTest.testConstructor -- Time elapsed: 0.016 s <<< ERROR!
 java.io.FileNotFoundException
 	at com.game.Room.<init>(Room.java:20)
 	at com.game.RoomMapTest.testConstructor(RoomMapTest.java:22)

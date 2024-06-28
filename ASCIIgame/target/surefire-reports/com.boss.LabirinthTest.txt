@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.boss.LabirinthTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.029 s <<< FAILURE! -- in com.boss.LabirinthTest
-com.boss.LabirinthTest.testWin -- Time elapsed: 0 s <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.040 s <<< FAILURE! -- in com.boss.LabirinthTest
+com.boss.LabirinthTest.testWin -- Time elapsed: 0.007 s <<< ERROR!
 java.io.FileNotFoundException
 	at com.game.Room.<init>(Room.java:14)
 	at com.boss.LabirinthTest$TestRoom.<init>(LabirinthTest.java:17)

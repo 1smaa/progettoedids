@@ -11,7 +11,7 @@ public class LabNodeTest {
     // we created a TestRoom class so that we can override the load() method and avoid using an actual I/O file
     class TestRoom extends Room {
         public TestRoom() throws FileNotFoundException {
-            super("testfile.txt", 1);
+            super("src/test/resources/testroom.txt", 1);
         }
 
         @Override

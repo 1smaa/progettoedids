@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.viewport.ViewportManagerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.023 s <<< FAILURE! -- in com.viewport.ViewportManagerTest
-com.viewport.ViewportManagerTest.testFormatWithLongerViewport -- Time elapsed: 0.003 s <<< ERROR!
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! -- in com.viewport.ViewportManagerTest
+com.viewport.ViewportManagerTest.testFormatWithLongerViewport -- Time elapsed: 0 s <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3
 	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
 	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
@@ -85,7 +85,7 @@ java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.viewport.ViewportManagerTest.testFormatWithOverlay -- Time elapsed: 0 s <<< ERROR!
+com.viewport.ViewportManagerTest.testFormatWithOverlay -- Time elapsed: 0.009 s <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3
 	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
 	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
