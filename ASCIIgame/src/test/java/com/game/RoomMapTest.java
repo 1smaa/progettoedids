@@ -27,9 +27,9 @@ public class    RoomMapTest {
         };
 
         RoomMap roomMap = new RoomMap(rooms, 0, 0);
-        assertEquals(room1, roomMap.get(0, 0));
-        assertEquals(room2, roomMap.get(1, 0));
-        assertEquals(room1, roomMap.get(0, 1));
+        assertTrue(room1.equals(roomMap.get(0, 0)));
+        assertTrue(room2.equals(roomMap.get(1, 0)));
+        assertFalse(room1.equals(roomMap.get(0, 1)));
 
         // delete test files
         deleteTestFile(validFile1);

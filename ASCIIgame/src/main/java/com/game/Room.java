@@ -40,4 +40,10 @@ public class Room implements Serializable {
     public void setValid(boolean v){
         this.isValid=v;
     }
+
+    public boolean equals(Room r) throws FileNotFoundException{
+        return (this.load().equals(r.load()))&&
+                (this.id==r.getId())&&
+                (this.isValid==r.valid());
+    }
 }

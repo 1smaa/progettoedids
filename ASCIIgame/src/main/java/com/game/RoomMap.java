@@ -11,7 +11,7 @@ public class RoomMap implements Serializable {
     private int x,y;
     public RoomMap(Room[][] roomArray,int startX,int startY) throws FileNotFoundException,IllegalArgumentException{
         //Check for file existence
-        this.rooms=roomArray.clone();
+        this.rooms=roomArray;
         if((roomArray.length==0||(startX<0||startX>roomArray[0].length))||(startY<0||startY>roomArray.length)) throw new IllegalArgumentException();
         this.current=this.rooms[startY][startX];
         this.currentStr=this.current.load();
