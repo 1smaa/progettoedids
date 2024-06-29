@@ -21,7 +21,7 @@ public class RoomMap implements Serializable {
     }
     //Checks for bounds in room matrix
     private boolean checkBounds(int nX,int nY){
-        return (nX>0&&nX<this.rooms[0].length)&&(nY>0&&nY<this.rooms.length);
+        return ((nY>=0&&nY<this.rooms.length)&&(nX>=0&&nX<this.rooms[nY].length));
     }
     //returns true if there was a room before the current one
     public boolean hasLast(){
@@ -50,7 +50,7 @@ public class RoomMap implements Serializable {
             default:
                 return false;
         }
-        if((this.rooms[newY][newX]==null||!checkBounds(newX, newY))||!this.rooms[newY][newX].valid()) return false;
+        if((this.rooms[newY][newX] == null||!checkBounds(newX, newY))||!this.rooms[newY][newX].valid()) return false;
         this.last=this.current;
         this.current=this.rooms[newY][newX];
         this.currentStr=this.current.load();

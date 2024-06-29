@@ -92,9 +92,11 @@ public class Labirinth implements Serializable,CallBack {
             scan.close();
             return false;
         }
-        Room r=map.get(6,2);
-        r.setValid(true);
-        map.set(6,2,r);
+        try{
+            Room r=map.get(6,2);
+            r.setValid(true);
+            map.set(6,2,r);
+        }catch(ArrayIndexOutOfBoundsException e){}
         tester.clearConsole();
         return true;
     }

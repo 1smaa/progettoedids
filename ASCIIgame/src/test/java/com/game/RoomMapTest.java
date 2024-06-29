@@ -92,7 +92,7 @@ public class    RoomMapTest {
 
         RoomMap roomMap = new RoomMap(rooms, 0, 0);
         assertFalse(roomMap.hasLast());
-        roomMap.move('d');
+        assertTrue(roomMap.move('d'));
         assertTrue(roomMap.hasLast());
     }
 
