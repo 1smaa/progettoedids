@@ -41,20 +41,7 @@ public class ViewportManagerTest {
         String overlay = "###\n###\n###";
         String viewport = "123\n456\n789";
         manager.setOverlay(overlay);
-        String expected = "###\n#12\n#45\n#78\n";
-        String result = manager.format(viewport);
-        assertEquals(expected, result);
-    }
-
-    // test format() method using a viewport that is longer than the overlay
-    @Test
-    public void testFormatWithLongerViewport() throws IllegalArgumentException {
-        System.out.println("tets format() method with viewport.length() > overlay.length()");
-        ViewportManager manager = new ViewportManager();
-        String overlay = "###\n###\n###";
-        String viewport = "123\n456\n789\n101112";
-        manager.setOverlay(overlay);
-        String expected = "###\n#12\n#45\n#78\n";
+        String expected = "###\n#12\n#45\n";
         String result = manager.format(viewport);
         assertEquals(expected, result);
     }

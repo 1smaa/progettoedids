@@ -13,16 +13,15 @@ public class ViewportManager {
         String[] viewportLines=viewport.split("\n");
         String res=overlayLines[0]+"\n";
         for(int i=1;i<overlayLines.length;i++){
-            if(i>viewportLines.length) {
+            if(i>=viewportLines.length) {
                 res+=overlayLines[i]+"\n";
                 continue;
             }
             StringBuilder bd=new StringBuilder(overlayLines[i]);
-            for(int j=0;j<bd.length();j++){
+            for(int j=0;j<bd.length()-1;j++){
                 if(j<viewportLines[i-1].length()) bd.setCharAt(j+1,viewportLines[i-1].charAt(j));
             }
             res+=bd+"\n";
-            //System.out.println(res);
         }
         return res;
     }
