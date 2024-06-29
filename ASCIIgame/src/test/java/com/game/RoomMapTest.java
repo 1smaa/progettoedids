@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class RoomMapTest {
+public class    RoomMapTest {
 
     @Test
     public void testConstructor() throws FileNotFoundException {
@@ -19,8 +19,8 @@ public class RoomMapTest {
         String validFile2 = "valid_file2.txt";
         createTestFile(validFile2, "This is a test file");
 
-        Room room1 = new Room("validFile1", 1, true);
-        Room room2 = new Room("validFile2", 2, true);
+        Room room1 = new Room("valid_file1.txt", 1, true);
+        Room room2 = new Room("valid_file2.txt", 2, true);
         Room[][] rooms = {
             {room1, room2},
             {room2, room1}
@@ -57,8 +57,8 @@ public class RoomMapTest {
         String validFile2 = "valid_file2.txt";
         createTestFile(validFile2, "This is a test file");
 
-        Room room1 = new Room("validFile1", 1, true);
-        Room room2 = new Room("validFile2", 2, true);
+        Room room1 = new Room("valid_file1.txt", 1, true);
+        Room room2 = new Room("valid_file2.txt", 2, true);
         Room[][] rooms = {
             {room1, room2},
             {room2, room1}
@@ -71,7 +71,7 @@ public class RoomMapTest {
 
     @Test
     public void testMoveOutOfBounds() throws FileNotFoundException {
-        Room room1 = new Room("room1.txt", 1, true);
+        Room room1 = new Room("src/main/resources/Rooms/1.txt", 1, true);
         Room[][] rooms = {
             {room1, null},
             {null, null}
@@ -83,8 +83,8 @@ public class RoomMapTest {
 
     @Test
     public void testHasLast() throws FileNotFoundException {
-        Room room1 = new Room("room1.txt", 1, true);
-        Room room2 = new Room("room2.txt", 2, true);
+        Room room1 = new Room("src/main/resources/Rooms/1.txt", 1, true);
+        Room room2 = new Room("src/main/resources/Rooms/2.txt", 2, true);
         Room[][] rooms = {
             {room1, room2},
             {room2, room1}
@@ -98,8 +98,8 @@ public class RoomMapTest {
 
     @Test
     public void testCurr() throws FileNotFoundException {
-        Room room1 = new Room("room1.txt", 1, true);
-        Room room2 = new Room("room2.txt", 2, true);
+        Room room1 = new Room("src/main/resources/Rooms/1.txt", 1, true);
+        Room room2 = new Room("src/main/resources/Rooms/2.txt", 2, true);
         Room[][] rooms = {
             {room1, room2},
             {room2, room1}
@@ -111,8 +111,8 @@ public class RoomMapTest {
 
     @Test
     public void testCurrId() throws FileNotFoundException {
-        Room room1 = new Room("room1.txt", 1, true);
-        Room room2 = new Room("room2.txt", 2, true);
+        Room room1 = new Room("src/main/resources/Rooms/1.txt", 1, true);
+        Room room2 = new Room("src/main/resources/Rooms/2.txt", 2, true);
         Room[][] rooms = {
             {room1, room2},
             {room2, room1}

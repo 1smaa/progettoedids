@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.boss.LabirinthTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.041 s <<< FAILURE! -- in com.boss.LabirinthTest
-com.boss.LabirinthTest.testOnCallback -- Time elapsed: 0.008 s <<< ERROR!
-java.io.FileNotFoundException
-	at com.game.Room.<init>(Room.java:20)
-	at com.game.RoomMap.<init>(RoomMap.java:18)
-	at com.boss.LabirinthTest.testOnCallback(LabirinthTest.java:109)
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.118 s <<< FAILURE! -- in com.boss.LabirinthTest
+com.boss.LabirinthTest.testOnCallback -- Time elapsed: 0.095 s <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at com.game.RoomMap.get(RoomMap.java:66)
+	at com.boss.Labirinth.onCallback(Labirinth.java:95)
+	at com.boss.LabirinthTest.testOnCallback(LabirinthTest.java:122)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)

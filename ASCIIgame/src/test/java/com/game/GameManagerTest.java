@@ -4,7 +4,9 @@ import com.atomic.Entity;
 import com.boss.CallBack;
 import com.boss.Labirinth;
 import org.junit.jupiter.api.Test;
-import java.io.FileNotFoundException;
+
+import java.io.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GameManagerTest {
@@ -12,14 +14,29 @@ public class GameManagerTest {
     @Test
     public void testMoveBossWins() throws FileNotFoundException {
         // Create entities
-        Entity player = new Entity("player", 10, 1, 2); // health = 10, speed = 1, damage = 2
+        Entity player = new Entity("player", 1000000, 1, 2); // health = 10, speed = 1, damage = 2
         Room[][] rooms = {
                 {new Room("src/main/resources/Rooms/1.txt", 1), new Room("src/main/resources/Rooms/2.txt", 2)},
                 {new Room("src/main/resources/Rooms/3.txt", 3), new Room("src/main/resources/Rooms/4.txt", 4)}
         };
-        RoomMap map = new RoomMap(rooms, 0, 0);
-        Labirinth labirinth = new Labirinth(null);
+        RoomMap map;
+        Labirinth labirinth;
+        try(FileInputStream fin=new FileInputStream("stdmap.config");
+            ObjectInputStream oin=new ObjectInputStream(fin)){
+            map=(RoomMap)oin.readObject();
+        }catch(IOException|ClassNotFoundException e){
+            e.printStackTrace();
+            return;
+        }
+        Labirinth=new
 
+        //Create string for boss fight long enough that it is very likely to win
+        String s="";
+        for(int i=0;i<1000;i++) s+="w ";
+
+        InputStream sub=new ByteArrayInputStream(s.getBytes());
+        InputStream og=System.in;
+        System.setIn(sub);
         // Create GameManager instance
         GameManager gameManager = new GameManager(player, map, labirinth);
 

@@ -1,12 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.game.GameManagerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.032 s <<< FAILURE! -- in com.game.GameManagerTest
-com.game.GameManagerTest.testMovePlayerWins -- Time elapsed: 0.018 s <<< ERROR!
-java.io.FileNotFoundException
-	at com.game.Room.<init>(Room.java:20)
-	at com.game.RoomMap.<init>(RoomMap.java:18)
-	at com.game.GameManagerTest.testMovePlayerWins(GameManagerTest.java:45)
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.028 s <<< FAILURE! -- in com.game.GameManagerTest
+com.game.GameManagerTest.testMovePlayerWins -- Time elapsed: 0.016 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
+	at com.game.GameManagerTest.testMovePlayerWins(GameManagerTest.java:54)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
@@ -76,11 +79,14 @@ java.io.FileNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.game.GameManagerTest.testMoveBossWins -- Time elapsed: 0 s <<< ERROR!
-java.io.FileNotFoundException
-	at com.game.Room.<init>(Room.java:20)
-	at com.game.RoomMap.<init>(RoomMap.java:18)
-	at com.game.GameManagerTest.testMoveBossWins(GameManagerTest.java:20)
+com.game.GameManagerTest.testMoveBossWins -- Time elapsed: 0.012 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
+	at com.game.GameManagerTest.testMoveBossWins(GameManagerTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)

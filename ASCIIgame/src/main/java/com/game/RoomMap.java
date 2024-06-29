@@ -15,7 +15,7 @@ public class RoomMap implements Serializable {
         if((roomArray.length==0||(startX<0||startX>roomArray[0].length))||(startY<0||startY>roomArray.length)) throw new IllegalArgumentException();
         this.current=this.rooms[startY][startX];
         this.currentStr=this.current.load();
-        this.last=new Room("",-1,false);
+        this.last=new Room("src/main/resources/Rooms/1.txt",-1,false);
         this.x=startX;
         this.y=startY;
     }

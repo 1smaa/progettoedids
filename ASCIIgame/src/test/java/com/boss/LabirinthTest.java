@@ -6,6 +6,8 @@ import com.game.Room;
 import com.game.RoomMap;
 import com.atomic.Item;
 import com.atomic.Entity;
+import java.io.InputStream;
+import java.io.ByteArrayInputStream;
 
 import java.io.FileNotFoundException;
 
@@ -112,8 +114,14 @@ public class LabirinthTest {
         // To test the callback properly, simulate user input and behavior.
         // Here we assume the callback method handles room changes and checks.
         // You can simulate the scenario by invoking the method and verifying the changes.
+        // We use System Input redirection in order to do so.
+        InputStream og=System.in;
+        String sim="a";
+        InputStream newIn=new ByteArrayInputStream(sim.getBytes());
+        System.setIn(newIn);
         boolean result = labirinth.onCallback(player, roomMap, labirinth, inventory);
-
+        // Restore the original system in
+        System.setIn(og);
         // We are assuming onCallback should return true when the labyrinth is completed.
         assertTrue(result);
     }
