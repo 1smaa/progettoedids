@@ -1,6 +1,8 @@
 package com.atomic;
 
-public class Entity {
+import java.io.Serializable;
+
+public class Entity implements Serializable {
     public int health;
     public int damage;
     public int speed;

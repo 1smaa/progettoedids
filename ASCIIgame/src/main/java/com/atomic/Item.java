@@ -1,6 +1,9 @@
 package com.atomic;
 
-public class Item {
+
+import java.io.Serializable;
+
+public class Item implements Serializable {
     public int damage;
     public int speed;
     public int weight;

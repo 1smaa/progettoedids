@@ -43,6 +43,9 @@ public class tester {
         if(res){
             System.out.println("Saved successfully.");
         } else System.out.println("Game not saved. Error while uploading.");
+        try{
+            Thread.sleep(3000);
+        }catch(InterruptedException e){}
     }
     private static void startGame(RoomMap map, Labirinth labirinth){
         clearConsole();
@@ -113,7 +116,20 @@ public class tester {
     private static void loadAndPlay(RoomMap map,Labirinth labirinth){
         clearConsole();
         CloudUploader cu=new CloudUploader(new CloudContainer());
-        CloudContainer cc=cu.download();
+        CloudContainer cc;
+        try {
+             cc = cu.download();
+             if((cc.gm==null||cc.player==null)||cc.rm==null) throw new Exception();
+        }catch(Exception e){
+            clearConsole();
+            e.printStackTrace();
+            System.err.println("There was an error while loading the game.");
+            try{
+                Thread.sleep(3000);
+            }catch(InterruptedException err){}
+            clearConsole();
+            return;
+        }
         GameManager gm=cc.gm;
         Entity player=cc.player;
         map=cc.rm;

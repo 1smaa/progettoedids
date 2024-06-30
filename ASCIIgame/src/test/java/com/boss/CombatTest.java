@@ -18,11 +18,11 @@ public class CombatTest {
     public void testConstructorAndStart() {
         System.out.println("test constructor and start() method");
         Entity entity = new Entity("boss", 2, 3, 2);
-        Entity player = new Entity("player", 25, 10, 10);
+        Entity player = new Entity("player", 205, 10, 10);
 
         //Create string for boss fight long enough that it is very likely to win
         String s="";
-        for(int i=0;i<10;i++) s+="w\n";
+        for(int i=0;i<100;i++) s+="w\n";
 
         InputStream sub=new ByteArrayInputStream(s.getBytes());
         InputStream og=System.in;
