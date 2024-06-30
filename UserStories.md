@@ -3,7 +3,7 @@
 	-	Show saved game
 	-	Exit button
 
-2.⁠	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate, resume or save my game
+2.	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate, resume or save my game
 	-	"Resume" button
 	-	"Save" button
 	-	"Exit" button
