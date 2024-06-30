@@ -1,6 +1,6 @@
 1.	As a player I want to interact with a menu so that I can manage my games
 	-	Display the menu and the "Start game" button so that I can start a new game
-	-	Display the menu and the "Continue" button to access a previously saved game, I have to be able to load the saved game and continue the story, if there isn't a previously saved game the button isn't shown
+	-	Display the menu and the "Continue" button to access a previously saved game, I have to be able to load the saved game and continue the story
 	-	Display the menu and the "Quit" button so that I can exit the game
 
 2.	⁠As a player ⁠⁠I want an in-game-menu menu⁠ ⁠so that I can terminate or save my game
