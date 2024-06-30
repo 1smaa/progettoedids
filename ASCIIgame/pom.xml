@@ -49,10 +49,6 @@
     </dependency>
     <dependency>
       <groupId>software.amazon.awssdk</groupId>
-      <artifactId>secretsmanager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>software.amazon.awssdk</groupId>
       <artifactId>s3control</artifactId>
     </dependency>
     <dependency>
@@ -66,14 +62,6 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>5.8.2</version> <!-- Make sure to use the latest version -->
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>software.amazon.awssdk</groupId>
-      <artifactId>netty-nio-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>software.amazon.awssdk</groupId>
-      <artifactId>sts</artifactId>
     </dependency>
     <dependency>
       <groupId>software.amazon.awssdk</groupId>
