@@ -1,4 +1,4 @@
-1.	As a Player I want a starting menu so that I can select witch game load
+1.	As a Player I want a starting menu so that I can select which game load
 	As a player
 	I want to interact with a menu
 	So that I can manage my games
