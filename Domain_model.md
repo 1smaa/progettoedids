@@ -1,34 +1,51 @@
 
 # Domain model
 
-![domainModel](https://github.com/1smaa/progettoedids/assets/77068062/a85bcd9c-f3d6-43ac-b47b-d1597916698f)
+![domainModel](https://github.com/1smaa/progettoedids/assets/169902818/c84d8c9e-886b-4c86-979c-2664c0465a28)
+
 
 ```plantuml
 @startuml
-object Entity{
-health
-damage
-speed
-position
+object Player {
+    health
+    damage
+    speed
 }
-object Fight
-object Item{
-weight
-name
+object Boss {
+    health
+    damage
+    speed
 }
-object Bucket
-object Map
-object Room
-object Labirinth
-object Inventory
-Entity "1"-left>"1" Inventory: has
-Inventory "1"-up-"*" Item : contains
-Map "1"->"1..." Room : contains
-Fight"1"->"0...1" Item: awards
-Entity "2"->"1" Fight: fights
-Entity "1..."-up-"1" Map: roams
-Bucket "1"-"1" Map: saves
-Bucket "1"-"1" Entity: saves
-Map "1"->"1" Labirinth: incorporates
+object Inventory {
+    Item
+    weight
+}
+Object Item {
+    name
+    damage
+    speed
+    weight
+}
+Object Labirinth 
+Object Game
+Object Map
+Object Room
+Object CloudBucket
+Object Fight
+Object WinOrLose
+
+Game "1" --* "1" Labirinth : Contains
+Game "1" --* "1" Map : Contains
+Map "1" --* "1..." Room : Contains
+Map "1" --> "1" Labirinth : Incorporates
+Inventory "1" --* "1..." Item : Contains
+Player "1" --> "1..." Fight : Fights
+Boss "1" --> "1..." Fight : Fights
+Player "1" --* "1..." Inventory : Has
+Fight "1" --> "1..." Item : Awards
+Player "1" --> "1" Game : Starts
+Game "1" --> "1" WinOrLose : Signals
+Player "1" --> "1" WinOrLose : Visualises
+CloudBucket "1" --> "1" Game : Saves
 @enduml
 ```
