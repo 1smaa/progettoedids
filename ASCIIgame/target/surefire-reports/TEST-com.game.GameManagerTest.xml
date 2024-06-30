@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.game.GameManagerTest" time="2.777" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.game.GameManagerTest" time="1.61" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IT"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lorenzon\AppData\Local\Temp\surefire16684084628176750463\surefirebooter-20240630145726022_3.jar C:\Users\Lorenzon\AppData\Local\Temp\surefire16684084628176750463 2024-06-30T14-57-25_756-jvmRun1 surefire-20240630145726022_1tmp surefire_0-20240630145726022_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Lorenzon\AppData\Local\Temp\surefire6177563395492830476\surefirebooter-20240630170400509_3.jar C:\Users\Lorenzon\AppData\Local\Temp\surefire6177563395492830476 2024-06-30T17-04-00_252-jvmRun1 surefire-20240630170400509_1tmp surefire_0-20240630170400509_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame\target\test-classes;C:\Users\Lorenzon\IdeaProjects\progettoedids\ASCIIgame\target\classes;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\regions\2.25.57\regions-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\annotations\2.25.57\annotations-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\utils\2.25.57\utils-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sdk-core\2.25.57\sdk-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\profiles\2.25.57\profiles-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\json-utils\2.25.57\json-utils-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\auth\2.25.57\auth-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\identity-spi\2.25.57\identity-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-client-spi\2.25.57\http-client-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth-aws\2.25.57\http-auth-aws-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth\2.25.57\http-auth-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\http-auth-spi\2.25.57\http-auth-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\eventstream\eventstream\1.0.1\eventstream-1.0.1.jar;C:\Users\Lorenzon\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Lorenzon\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\apache-client\2.25.57\apache-client-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\metrics-spi\2.25.57\metrics-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Lorenzon\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Lorenzon\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Lorenzon\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\sso\2.25.57\sso-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\protocol-core\2.25.57\protocol-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-json-protocol\2.25.57\aws-json-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-core\2.25.57\aws-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\endpoints-spi\2.25.57\endpoints-spi-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\netty-nio-client\2.25.57\netty-nio-client-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec-http\4.1.108.Final\netty-codec-http-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec-http2\4.1.108.Final\netty-codec-http2-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-codec\4.1.108.Final\netty-codec-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport\4.1.108.Final\netty-transport-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-common\4.1.108.Final\netty-common-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-buffer\4.1.108.Final\netty-buffer-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-handler\4.1.108.Final\netty-handler-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.108.Final\netty-transport-native-unix-common-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.108.Final\netty-transport-classes-epoll-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\io\netty\netty-resolver\4.1.108.Final\netty-resolver-4.1.108.Final.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\ssooidc\2.25.57\ssooidc-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\third-party-jackson-core\2.25.57\third-party-jackson-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3-transfer-manager\2.25.57\s3-transfer-manager-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\arns\2.25.57\arns-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3control\2.25.57\s3control-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-xml-protocol\2.25.57\aws-xml-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\aws-query-protocol\2.25.57\aws-query-protocol-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Lorenzon\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lorenzon\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Lorenzon\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\s3\2.25.57\s3-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\crt-core\2.25.57\crt-core-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\checksums\2.25.57\checksums-2.25.57.jar;C:\Users\Lorenzon\.m2\repository\software\amazon\awssdk\checksums-spi\2.25.57\checksums-spi-2.25.57.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Lorenzon\AppData\Local\Temp\surefire16684084628176750463\surefirebooter-20240630145726022_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lorenzon\AppData\Local\Temp\surefire6177563395492830476\surefirebooter-20240630170400509_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.1+8-16"/>
@@ -58,283 +58,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="testMovePlayerWins" classname="com.game.GameManagerTest" time="2.348">
+  <testcase name="testMovePlayerWins" classname="com.game.GameManagerTest" time="1.187">
     <system-out><![CDATA[_____________________________________________________
 |                                                    |
 |   Oh no, Elvis here...           _______           |
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press d                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press d                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press d                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press d                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOOOOO              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
 |   Press w                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
@@ -350,7 +80,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press s                        |  /_  |          |
+|   Press d                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
 |  Elvis OOOOOOOOO-              ____|   |_____      |
@@ -410,70 +140,10 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOO---              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOO---              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOO---              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press w                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOOO---              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
 |   Press d                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOO----              ____|   |_____      |
+|  Elvis OOOOOOO---              ____|   |_____      |
 |                               |              |     |
 |                              |    |       |   |    |
 |                                                    |
@@ -485,25 +155,10 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press d                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOO----              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press w                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOOOO----              ____|   |_____      |
+|  Elvis OOOOOOO---              ____|   |_____      |
 |                               |              |     |
 |                              |    |       |   |    |
 |                                                    |
@@ -516,6 +171,156 @@ _____________________________________________________
 |                                  | \  / |          |
 |                                  | @  @ |          |
 |   Press s                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOOOO---              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press w                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOOOO---              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press s                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOOO----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press w                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOOO----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press d                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOO-----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press d                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOO-----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press a                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOO-----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press a                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOO-----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press d                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOO-----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press a                        |  /_  |          |
+|                                  |  __  |          |
+|  You OOOOOOOOOO                   \____/           |
+|  Elvis OOOOO-----              ____|   |_____      |
+|                               |              |     |
+|                              |    |       |   |    |
+|                                                    |
+|____________________________________________________|
+
+_____________________________________________________
+|                                                    |
+|   Oh no, Elvis here...           _______           |
+|   Prepare for the showdown       \ _____\          |
+|                                  | \  / |          |
+|                                  | @  @ |          |
+|   Press d                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
 |  Elvis OOOOO-----              ____|   |_____      |
@@ -545,21 +350,6 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOOO------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
 |   Press w                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
@@ -575,82 +365,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press d                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOO-------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOO-------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOO-------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOO-------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOO-------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press d                        |  /_  |          |
+|   Press s                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
 |  Elvis OOO-------              ____|   |_____      |
@@ -680,22 +395,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis OOO-------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
+|   Press s                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
 |  Elvis OOO-------              ____|   |_____      |
@@ -740,51 +440,6 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press d                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis O---------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press a                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis O---------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
-|   Press s                        |  /_  |          |
-|                                  |  __  |          |
-|  You OOOOOOOOOO                   \____/           |
-|  Elvis O---------              ____|   |_____      |
-|                               |              |     |
-|                              |    |       |   |    |
-|                                                    |
-|____________________________________________________|
-
-_____________________________________________________
-|                                                    |
-|   Oh no, Elvis here...           _______           |
-|   Prepare for the showdown       \ _____\          |
-|                                  | \  / |          |
-|                                  | @  @ |          |
 |   Press w                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOOO                   \____/           |
@@ -812,7 +467,7 @@ W - Up    A - Left    S - Down    D - Right
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMoveBossWins" classname="com.game.GameManagerTest" time="0.409">
+  <testcase name="testMoveBossWins" classname="com.game.GameManagerTest" time="0.419">
     <system-out><![CDATA[_____________________________________________________
 |                                                    |
 |   Oh no, Elvis here...           _______           |
@@ -834,7 +489,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press d                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOOO-                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -849,7 +504,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press w                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOOO--                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -864,7 +519,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press a                        |  /_  |          |
+|   Press d                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOOOO---                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -894,7 +549,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press s                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOOO-----                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -909,7 +564,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press w                        |  /_  |          |
+|   Press d                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOOO------                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -924,7 +579,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press d                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You OOO-------                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -939,7 +594,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press s                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You OO--------                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |
@@ -954,7 +609,7 @@ _____________________________________________________
 |   Prepare for the showdown       \ _____\          |
 |                                  | \  / |          |
 |                                  | @  @ |          |
-|   Press d                        |  /_  |          |
+|   Press a                        |  /_  |          |
 |                                  |  __  |          |
 |  You O---------                   \____/           |
 |  Elvis OOOOOOOOOO              ____|   |_____      |

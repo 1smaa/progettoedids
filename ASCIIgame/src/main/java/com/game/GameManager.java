@@ -3,6 +3,7 @@ package com.game;
 import com.atomic.Entity;
 import com.atomic.Item;
 import com.boss.*;
+import com.tester;
 
 import java.io.FileNotFoundException;
 import java.io.Serializable;
@@ -39,7 +40,13 @@ public class GameManager implements Serializable {
             //If the fight has been won increment the phase index
             if(res) this.ind++;
             //Otherwise return gameover
-            else return -1;
+            else {
+                if(this.ind==3) {
+                    tester.clearConsole();
+                    return 0;
+                }
+                return -1;
+            };
             //If the current index is over the limit of com.game phases, the com.game has been beaten and the player won
             if(this.ind==this.phases.length) return 1;
         }
