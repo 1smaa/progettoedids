@@ -1,7 +1,7 @@
 1.	As a player I want to interact with a menu so that I can manage my games
 	-	New Game button
 	-	Show saved game
-	-	Exit button
+	-	Quit button
 
 2.	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate or save my game
 	-	"Save" button
