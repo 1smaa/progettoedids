@@ -1,47 +1,25 @@
-1.	As a Player I want a starting menu so that I can select which game load
-	As a player
-	I want to interact with a menu
-	So that I can manage my games
+1.	As a player I want to interact with a menu so that I can manage my games
 	-	New Game button
 	-	Show saved game
 	-	Exit button
 
-2.⁠	As a player ⁠i want a pausing menu⁠ ⁠so that I can terminate, resume or save my game
-	As a player
- 	I want an in-game-menu
-  	So that I can exit my game
+2.⁠	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate, resume or save my game
 	-	"Resume" button
 	-	"Save" button
 	-	"Exit" button
 
-3.	As a player I want an inventory
-	As a player
-	I want an inventory
-	So that I can manage my items
+3.	As a player I want an inventory so that I can manage my items
 	-	Display health
 	-	Show list of items in inventory
+	-	Show weight of inventory
 
-4.	As a player I want a guide so that I can figure out the commands to play
-	As a player
-	I want a guide
-	So that I can learn how to play
-	-	Display list of commands
-	-	Show explanation of how game works
 
-5.	As a player I want to attack
-	As a player
-	I want to attack
-	So that I can defeat enemies
-	-	Display damage done
+4.	As a player I want to attack so that I can defeat enemies
+	-	Display damage done/received
 	-	Show attack button
 
-6.	As a player I want to solve the quests
-	As a player
-	I want to solve the quests
-	so that I can continue the game
+5.	As a player I want to solve the quests so that I can continue the game
 	-	Choose the option I want
 
-7.	As I player I want to complete the game
-	As a player
-	I want to complete the game
+6.	As I player I want to complete the game
 	-	I want to win or lose as a consequence of my actions
