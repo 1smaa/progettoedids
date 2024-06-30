@@ -8,8 +8,8 @@
 
 2.⁠	As a player ⁠i want a pausing menu⁠ ⁠so that I can terminate, resume or save my game
 	As a player
-	I want an in-game-menu
-	So that I can exit my game
+ 	I want an in-game-menu
+  	So that I can exit my game
 	-	"Resume" button
 	-	"Save" button
 	-	"Exit" button
