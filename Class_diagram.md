@@ -1,7 +1,7 @@
 
 # Class diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/d6cbb2bb-4e32-400f-910e-08b32229858b)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/8c8cfbd7-3a8a-4071-bd57-2fc854c924b7)
 
 
 ```plantuml
@@ -158,24 +158,24 @@ class tester{
     + {static} void main(String[])
 }
 
-RoomMap "*" -left-* "*"  Room : Contiene ed istanzia
-Combat "1" -right-* "*" Entity : Contiene ed istanzia
-GameManager "1" --* "*" Item : Contiene ed istanzia
-LabNode "*" -right-* "*" Room : Contiene ed istanzia
-Labirinth "1" -right-* "*" LabNode : Contiene ed istanzia
-GameManager "1" -up-> "*" RoomMap : Utilizza
-GameManager "1" -left-* "*" Entity : Contiene ed istanzia
-GameManager "1" --> "1" Labirinth : Utilizza
-GameManager "1" -down-> "1" ViewportManager : Utilizza
-tester "1" -up-> "1" GameManager : Lancia
-FirstBoss "1" --* "1" Entity : Contiene ed istanzia
-SecondBoss "1" --* "1" Entity : Contiene ed istanzia
-ThirdBoss "1" --* "1" Entity : Contiene ed istanzia
-FinalBoss "1" --* "1" Entity : Contiene ed istanzia
-CloudUploader "1" --* "1" CloudContainer : Contiene ed istanzia
-CloudContainer "1" --> "*" RoomMap : Contiene
-CloudContainer "1" --> "*" Entity : Contiene
-CloudContainer "1" --> "1" GameManager : Contiene
+RoomMap "*" -left-* "*"  Room : Contains and instantiates
+Combat "1" -right-* "*" Entity : Contains and instantiates
+GameManager "1" --* "*" Item : Contains and instantiates
+LabNode "*" -right-* "*" Room : Contains and instantiates
+Labirinth "1" -right-* "*" LabNode : Contains and instantiates
+GameManager "1" -up-> "*" RoomMap : Utilises
+GameManager "1" -left-* "*" Entity : Contains and instantiates
+GameManager "1" --> "1" Labirinth : Utilises
+GameManager "1" -down-> "1" ViewportManager : Utilises
+tester "1" -up-> "1" GameManager : Launches
+FirstBoss "1" --* "1" Entity : Contains and instantiates
+SecondBoss "1" --* "1" Entity : Contains and instantiates
+ThirdBoss "1" --* "1" Entity : Contains and instantiates
+FinalBoss "1" --* "1" Entity : Contains and instantiates
+CloudUploader "1" --* "1" CloudContainer : Contains and instantiates
+CloudContainer "1" --> "*" RoomMap : Contains
+CloudContainer "1" --> "*" Entity : Contains
+CloudContainer "1" --> "1" GameManager : Contains
 CallBack .down.> FinalBoss
 CallBack .down.> FirstBoss
 CallBack .down.> SecondBoss
