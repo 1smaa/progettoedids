@@ -5,7 +5,7 @@
 
 2.	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate or save my game
 	-	"Save" button
-	-	"Exit" button
+	-	"Quit" button
 
 3.	As a player I want an inventory so that I can manage my items
 	-	Display health
