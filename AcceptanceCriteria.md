@@ -22,5 +22,5 @@
 	-	The game has to show the options and I can choose one, for example: A ..., B ... -> if I want to choose option A I have to press A 
 
 6.	As a player I want to complete the game
-	-	If my health is 0 the game has to tell me I have lost
+	-	If my health is 0/I haven't answered correctly to a quest the game has to tell me I have lost
 	-	If I don't lose and arrive at the end of the game I win
