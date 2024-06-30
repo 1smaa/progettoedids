@@ -3,8 +3,7 @@
 	-	Show saved game
 	-	Exit button
 
-2.	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate, resume or save my game
-	-	"Resume" button
+2.	As a player ⁠I want an in-game-menu menu⁠ ⁠so that I can terminate or save my game
 	-	"Save" button
 	-	"Exit" button
 
@@ -12,7 +11,6 @@
 	-	Display health
 	-	Show list of items in inventory
 	-	Show weight of inventory
-
 
 4.	As a player I want to attack so that I can defeat enemies
 	-	Display damage done/received
