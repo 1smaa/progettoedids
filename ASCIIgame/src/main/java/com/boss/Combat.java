@@ -36,6 +36,7 @@ public class Combat {
             Callable<String> task = new Callable<String>() {
                 @Override
                 public String call() {
+                    if(!scanner.hasNextLine()) return "";
                     return scanner.nextLine();
                 }
             };

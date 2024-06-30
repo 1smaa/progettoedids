@@ -7,6 +7,7 @@ import com.tester;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class FirstBoss implements CallBack{
@@ -34,7 +35,12 @@ public class FirstBoss implements CallBack{
             tester.clearConsole();
             System.out.println(f);
             Scanner scan=new Scanner(System.in);
-            char res=scan.next().charAt(0);
+            char res;
+            try{
+                res=scan.next().charAt(0);
+            }catch(NoSuchElementException e){
+                res='n';
+            }
             if(res=='y'){
                 for(int i=0;i<inventory.length;i++){
                     if(inventory[i].item.equals("-")){

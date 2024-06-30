@@ -8,6 +8,7 @@ import com.tester;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ThirdBoss implements CallBack {
@@ -72,7 +73,12 @@ public class ThirdBoss implements CallBack {
             overlay=overlay.replace("2",desc);
             tester.clearConsole();
             System.out.println(overlay);
-            char res=scan.next().charAt(0);
+            char res;
+            try{
+                res=scan.next().charAt(0);
+            }catch(NoSuchElementException e){
+                res='n';
+            }
             if(res=='y'){
                 for(int i=0;i<inventory.length;i++){
                     if(inventory[i].item.equals("-")){

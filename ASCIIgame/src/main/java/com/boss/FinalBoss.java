@@ -58,6 +58,7 @@ public class FinalBoss implements CallBack{
             Scanner sc=new Scanner(fin);
             while(sc.hasNextLine()) s+=sc.nextLine()+"\n";
         }catch(FileNotFoundException e){ return false; }
+        tester.clearConsole();
         Combat c=new Combat(this.boss,player);
         return c.start(s)==0;
     }

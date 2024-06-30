@@ -13,7 +13,7 @@ public class ViewportManager {
         String[] viewportLines=viewport.split("\n");
         String res=overlayLines[0]+"\n";
         for(int i=1;i<overlayLines.length;i++){
-            if(i>=viewportLines.length) {
+            if(i>viewportLines.length) {
                 res+=overlayLines[i]+"\n";
                 continue;
             }

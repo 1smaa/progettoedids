@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.cloud.CloudUploaderTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.413 s -- in com.cloud.CloudUploaderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.743 s -- in com.cloud.CloudUploaderTest

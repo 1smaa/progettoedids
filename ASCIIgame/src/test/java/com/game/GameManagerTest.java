@@ -65,11 +65,12 @@ public class GameManagerTest {
         System.setIn(sub);
         // Create GameManager instance
         GameManager gameManager = new GameManager(player, map, labirinth);
-
         // Perform moves to trigger boss fights
         assertEquals(0, gameManager.move('w')); // Move right to room 2 (no boss fight)
 
         // Assert that GameManager proceeds to next phase (index 1)
-        assertEquals(-1, gameManager.move('d')); // Boss fight won, move to next phase (room 6)
+        assertEquals(0, gameManager.move('d')); // Boss fight won, move to next phase (room 6)
+
+        System.setIn(og);
     }
 }

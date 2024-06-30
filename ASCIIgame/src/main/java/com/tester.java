@@ -18,7 +18,7 @@ import java.io.File;
 public class tester {
     private static final String MAPFILE="stdmap.config";
     private static final String LABFILE="lab.config";
-    private static final String MENU="S - Start game\nQ - Quit\nC - Continue\nM- Manual\n";
+    private static final String MENU="S - Start game\nQ - Quit\nC - Continue\n";
     public static void clearConsole() {
         try {
             if (System.getProperty("os.name").contains("Windows")) {
@@ -110,10 +110,6 @@ public class tester {
             Thread.sleep(5000);
         }catch(InterruptedException e){}
     }
-    private static void printManual(){
-        clearConsole();
-        System.out.println("manuale");
-    }
     private static void loadAndPlay(RoomMap map,Labirinth labirinth){
         clearConsole();
         CloudUploader cu=new CloudUploader(new CloudContainer());
@@ -154,8 +150,6 @@ public class tester {
             visInv=gm.getVisInventory();
             String nOverlay=OGoverlay;
             for(int i=0;i<visInv.length;i++){
-                //System.out.println(visInv[i]);
-                //try{ Thread.sleep(3000); } catch(Exception e){ e.printStackTrace(); }
                 nOverlay=nOverlay.replaceFirst("£",visInv[i]);
             }
             String g="";
@@ -200,9 +194,6 @@ public class tester {
                     break;
                 case 's':
                     startGame(map,labirinth);
-                    break;
-                case 'm':
-                    printManual();
                     break;
                 case 'c':
                     loadAndPlay(map,labirinth);
