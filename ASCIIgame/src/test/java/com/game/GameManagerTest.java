@@ -40,6 +40,7 @@ public class GameManagerTest {
 
         // Assert that GameManager proceeds to next phase (index 1)
         assertEquals(-1, gameManager.move('d')); // Boss fight won, move to next phase (room 5)
+        System.setIn(og);
     }
 
     @Test
