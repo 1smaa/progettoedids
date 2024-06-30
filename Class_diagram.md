@@ -1,7 +1,7 @@
 
 # Class diagram
 
-![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/8c8cfbd7-3a8a-4071-bd57-2fc854c924b7)
+![classDiagram](https://github.com/1smaa/progettoedids/assets/169902818/f634d977-941c-4f79-b2b9-4a2d0f2fe870)
 
 
 ```plantuml
@@ -34,7 +34,7 @@ class Combat {
     - Entity player
     + Combat(Entity, Entity)
     + int start()
-    - void loghealth(int, int)
+    - void logHealth(int, int)
     - void clearConsole()
 }
 
@@ -160,6 +160,7 @@ class tester{
 
 RoomMap "*" -left-* "*"  Room : Contains and instantiates
 Combat "1" -right-* "*" Entity : Contains and instantiates
+Combat "1" -down-* "*" Item : Contains and instantiates
 GameManager "1" --* "*" Item : Contains and instantiates
 LabNode "*" -right-* "*" Room : Contains and instantiates
 Labirinth "1" -right-* "*" LabNode : Contains and instantiates
