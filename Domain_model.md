@@ -1,7 +1,7 @@
 
 # Domain model
 
-![domainModel]([https://www.plantuml.com/plantuml/png/bP5FImCn4CNl-HHXZq8BNZr8RK4jL2eAUfvsXsuqVqfcjgM8tzrqsB311i6zx4lcDs-Il1anHEwTLM7pWLlMpnPE6FMNqkdh42nt8bjmi4EHj4TirNVkc0UY__1BVq3F8Pw6fYMZ4t54i-iuWMi1fJ0m7XpMRMkDAzYOQ3ntEkyyfFwids2VvKi8Bkk53NqxxxUVo7dh_coR5-_6h-Cg42frTjFDTQCdaolvZmDlz29u1kFfaag3otfQ5kNfTDh8UUh8xSMSfT-6k0yH64cDR_hBKTwmS1pY7Ks5aeicJFwa9D6_aT4dNs_CDL6FG4h8qgOupzqHObivJID99U2L8NBnXhcSKn36x3pOgak9lHdgmHf2KaN6rQ5mID0CVTix-mC0])
+![domainModel](![image](https://github.com/1smaa/progettoedids/assets/77068062/c76bac92-4460-40fa-97b5-f0db64210447))
 
 
 ```plantuml
