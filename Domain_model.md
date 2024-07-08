@@ -41,7 +41,7 @@ Map "1" --> "1" Labirinth : Incorporates
 Inventory "1" --* "1..." Item : Contains
 Player "1" --> "1..." Fight : Fights
 Boss "1" --> "1..." Fight : Fights
-Player "1" --* "1..." Inventory : Has
+Player "1" --* "1" Inventory : Has
 Fight "1" --> "1..." Item : Awards
 Player "1" --> "1" Game : Starts
 Game "1" --> "1" WinOrLose : Signals
