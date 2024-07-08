@@ -1,7 +1,7 @@
 
 # Domain model
 
-![domainModel](https://github.com/1smaa/progettoedids/assets/77068062/3e30d3dd-3326-4a8c-a51d-c252f652ef53)
+![domainModel](https://github.com/1smaa/progettoedids/assets/77068062/4f1daed7-f10c-43d8-83e8-605b9a463344)
 
 
 ```plantuml
@@ -25,15 +25,11 @@ object Item {
     speed
     weight
 }
-object Labyrinth {
-    rooms
-}
+object Labyrinth 
 object Game {
     id
 }
-object Map {
-    rooms
-}
+object Map
 object Room {
     id
 }
