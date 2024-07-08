@@ -1,7 +1,7 @@
 
 # Domain model
 
-![domainModel]([https://github.com/1smaa/progettoedids/assets/77068062/c76bac92-4460-40fa-97b5-f0db64210447])
+![domainModel](https://github.com/1smaa/progettoedids/assets/77068062/c76bac92-4460-40fa-97b5-f0db64210447)
 
 
 ```plantuml
