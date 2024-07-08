@@ -42,7 +42,6 @@ public class LabirinthTest {
     }
 
     // test move() method
-    //?perchè left va bene true ma tutte le altre devo mettere false o da errore
     @Test
     public void testMove() throws FileNotFoundException {
         System.out.println("test move() method");
@@ -94,7 +93,7 @@ public class LabirinthTest {
         }
     }
 
-    // test onCallBack() method (ci mette una vita e non finisce mai)
+    // test onCallBack() method
     @Test
     public void testOnCallback() throws FileNotFoundException {
         LabNode n=new LabNode(null,null,null,new TestRoom());
